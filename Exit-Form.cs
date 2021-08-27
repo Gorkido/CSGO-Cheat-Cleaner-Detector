@@ -41,6 +41,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
             Exit.ForeColor = Color.FromArgb(r, g, b);
             Are_You_Sure.ForeColor = Color.FromArgb(r, g, b);
+            Clock1.ForeColor = Color.FromArgb(r, g, b);
             Exit_App.ForeColor = Color.FromArgb(r, g, b);
             Cancel.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
