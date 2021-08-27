@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -70,11 +64,13 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
+            Clock1Timer.Enabled = false;
             Hide();
         }
 
         private void Cancel_MouseDown(object sender, MouseEventArgs e)
         {
+            Clock1Timer.Enabled = false;
             Hide();
         }
 
@@ -107,6 +103,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         // Executing .Bat file
         private void Exit_App_MouseDown(object sender, MouseEventArgs e)
         {
+            Clock1Timer.Enabled = false;
             Hide();
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string dir2 = @"\Cleaner.bat";
@@ -117,6 +114,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             Application.Exit();// Exit from the application.
         }
 
+        private void Clock1Timer_Tick(object sender, EventArgs e)
+        {
+            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
+        }
+
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -124,7 +126,8 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Form_Load(object sender, EventArgs e)
         {
-
+            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
+            Clock1Timer.Enabled = true;
         }
     }
 }

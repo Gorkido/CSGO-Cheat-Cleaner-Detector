@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -44,6 +38,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             CSGO_Cheat_Cleaner.ForeColor = Color.FromArgb(r, g, b);
             CSGO_Cheat_Detector.ForeColor = Color.FromArgb(r, g, b);
             Exit.ForeColor = Color.FromArgb(r, g, b);
+            Clock1.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
@@ -65,11 +60,13 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
+            Clock1Timer.Enabled = false;
             Application.Exit();
         }
 
         private void CSGO_Cheat_Cleaner_MouseDown(object sender, MouseEventArgs e)
         {
+            Clock1Timer.Enabled = false;
             Hide();
             Cleaner_Form openTest = new Cleaner_Form();
             openTest.Show();
@@ -77,9 +74,15 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void CSGO_Cheat_Detector_MouseDown(object sender, MouseEventArgs e)
         {
+            Clock1Timer.Enabled = false;
             Hide();
             Detector_Form openTest = new Detector_Form();
             openTest.Show();
+        }
+
+        private void Clock1Timer_Tick(object sender, EventArgs e)
+        {
+            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
@@ -89,7 +92,8 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Form_Load(object sender, EventArgs e)
         {
-
+            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
+            Clock1Timer.Enabled = true;
         }
     }
 }

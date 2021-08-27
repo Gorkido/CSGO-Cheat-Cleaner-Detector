@@ -32,6 +32,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Exit_Form));
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Background_Panel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.Clock1 = new System.Windows.Forms.Label();
             this.Are_You_Sure = new System.Windows.Forms.Label();
             this.Exit_App = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Cancel = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -45,6 +46,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLogElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.FormDrag4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.Clock1);
             this.Background_Panel.Controls.Add(this.Are_You_Sure);
             this.Background_Panel.Controls.Add(this.Exit_App);
             this.Background_Panel.Controls.Add(this.Cancel);
@@ -72,6 +75,19 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.Size = new System.Drawing.Size(353, 184);
             this.Background_Panel.TabIndex = 1;
             // 
+            // Clock1
+            // 
+            this.Clock1.BackColor = System.Drawing.Color.Transparent;
+            this.Clock1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Clock1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clock1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock1.ForeColor = System.Drawing.Color.White;
+            this.Clock1.Location = new System.Drawing.Point(0, 160);
+            this.Clock1.Name = "Clock1";
+            this.Clock1.Size = new System.Drawing.Size(353, 24);
+            this.Clock1.TabIndex = 7;
+            this.Clock1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Are_You_Sure
             // 
             this.Are_You_Sure.AutoSize = true;
@@ -79,7 +95,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Are_You_Sure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Are_You_Sure.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Are_You_Sure.ForeColor = System.Drawing.Color.White;
-            this.Are_You_Sure.Location = new System.Drawing.Point(19, 76);
+            this.Are_You_Sure.Location = new System.Drawing.Point(19, 72);
             this.Are_You_Sure.Name = "Are_You_Sure";
             this.Are_You_Sure.Size = new System.Drawing.Size(316, 24);
             this.Are_You_Sure.TabIndex = 6;
@@ -104,7 +120,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Exit_App.ForeColor = System.Drawing.Color.White;
             this.Exit_App.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.Exit_App.HoverState.Parent = this.Exit_App;
-            this.Exit_App.Location = new System.Drawing.Point(25, 117);
+            this.Exit_App.Location = new System.Drawing.Point(25, 110);
             this.Exit_App.Name = "Exit_App";
             this.Exit_App.ShadowDecoration.Parent = this.Exit_App;
             this.Exit_App.Size = new System.Drawing.Size(97, 48);
@@ -131,7 +147,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Cancel.ForeColor = System.Drawing.Color.White;
             this.Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.Cancel.HoverState.Parent = this.Cancel;
-            this.Cancel.Location = new System.Drawing.Point(224, 117);
+            this.Cancel.Location = new System.Drawing.Point(224, 110);
             this.Cancel.Name = "Cancel";
             this.Cancel.ShadowDecoration.Parent = this.Cancel;
             this.Cancel.Size = new System.Drawing.Size(97, 48);
@@ -224,6 +240,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             this.CheatLogElipse.BorderRadius = 40;
             // 
+            // Clock1Timer
+            // 
+            this.Clock1Timer.Interval = 1000;
+            this.Clock1Timer.Tick += new System.EventHandler(this.Clock1Timer_Tick);
+            // 
             // Exit_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -239,6 +260,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Exit_Form";
             this.TopMost = true;
+            this.Load += new System.EventHandler(this.Form_Load);
             this.Background_Panel.ResumeLayout(false);
             this.Background_Panel.PerformLayout();
             this.Drag_Panel.ResumeLayout(false);
@@ -263,5 +285,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2DragControl FormDrag4;
         private Guna.UI2.WinForms.Guna2GradientButton Exit_App;
         private System.Windows.Forms.Label Are_You_Sure;
+        private System.Windows.Forms.Timer Clock1Timer;
+        private System.Windows.Forms.Label Clock1;
     }
 }

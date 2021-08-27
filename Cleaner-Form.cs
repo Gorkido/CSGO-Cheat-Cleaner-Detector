@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -151,6 +145,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             Clean.ForeColor = Color.FromArgb(r, g, b);
             CleanLog.ForeColor = Color.FromArgb(r, g, b);
             Exit.ForeColor = Color.FromArgb(r, g, b);
+            Clock1.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
@@ -270,6 +265,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
         }
 
+        private void Clock1Timer_Tick(object sender, EventArgs e)
+        {
+            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
+        }
+
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -277,6 +277,8 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Form_Load(object sender, EventArgs e)
         {
+            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
+            Clock1Timer.Enabled = true;
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             Thread.Sleep(1000);
             Extract("CSGO_Cheat_Cleaner_Detector", sPath, "Resources", "Cleaner.bat"); // Extracting "Cleaner.bat"

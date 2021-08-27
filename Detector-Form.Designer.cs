@@ -45,6 +45,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLogElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.FormDrag4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.Clock1 = new System.Windows.Forms.Label();
+            this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.Clock1);
             this.Background_Panel.Controls.Add(this.Find);
             this.Background_Panel.Controls.Add(this.CheatLog);
             this.Background_Panel.Controls.Add(this.Drag_Panel);
@@ -202,6 +205,24 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             this.FormDrag4.TargetControl = this.CheatLog;
             // 
+            // Clock1
+            // 
+            this.Clock1.BackColor = System.Drawing.Color.Transparent;
+            this.Clock1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Clock1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clock1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock1.ForeColor = System.Drawing.Color.White;
+            this.Clock1.Location = new System.Drawing.Point(0, 398);
+            this.Clock1.Name = "Clock1";
+            this.Clock1.Size = new System.Drawing.Size(800, 52);
+            this.Clock1.TabIndex = 6;
+            this.Clock1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Clock1Timer
+            // 
+            this.Clock1Timer.Interval = 1000;
+            this.Clock1Timer.Tick += new System.EventHandler(this.Clock1Timer_Tick);
+            // 
             // Detector_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -238,6 +259,8 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2Elipse CheatLogElipse;
         private Guna.UI2.WinForms.Guna2GradientButton Find;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag4;
+        private System.Windows.Forms.Label Clock1;
+        private System.Windows.Forms.Timer Clock1Timer;
     }
 }
 
