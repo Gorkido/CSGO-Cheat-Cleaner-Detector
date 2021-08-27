@@ -220,7 +220,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             string[] Temporary = {
                 Temp,
                 Temp2,
-                Recent,
+                Recent + "\\",
                 Prefetch
             };
             // Temporary Folders
