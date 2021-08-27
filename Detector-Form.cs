@@ -14,25 +14,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         }
 
         // Form Design
-        private void Exit_MouseEnter(object sender, EventArgs e)
-        {
-            Exit.ForeColor = Color.Red;
-        }
-
-        private void Exit_MouseLeave(object sender, EventArgs e)
-        {
-            Exit.ForeColor = Color.White;
-        }
-
-        private void Minimize_MouseEnter(object sender, EventArgs e)
-        {
-            Minimize.ForeColor = Color.Gray;
-        }
-
-        private void Minimize_MouseLeave(object sender, EventArgs e)
-        {
-            Minimize.ForeColor = Color.White;
-        }
         private int r = 0, g = 210, b = 0;
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)

@@ -200,9 +200,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Minimize.Size = new System.Drawing.Size(27, 19);
             this.Minimize.TabIndex = 1;
             this.Minimize.Text = "__";
-            this.Minimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Minimize_MouseDown);
-            this.Minimize.MouseEnter += new System.EventHandler(this.Minimize_MouseEnter);
-            this.Minimize.MouseLeave += new System.EventHandler(this.Minimize_MouseLeave);
             // 
             // Exit
             // 
@@ -215,9 +212,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Exit.Size = new System.Drawing.Size(34, 34);
             this.Exit.TabIndex = 0;
             this.Exit.Text = "X";
-            this.Exit.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Exit_MouseDown);
-            this.Exit.MouseEnter += new System.EventHandler(this.Exit_MouseEnter);
-            this.Exit.MouseLeave += new System.EventHandler(this.Exit_MouseLeave);
             // 
             // FormDrag
             // 
