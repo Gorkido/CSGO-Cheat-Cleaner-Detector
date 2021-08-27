@@ -112,7 +112,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.CSGO_Cheat_Cleaner.ShadowDecoration.Parent = this.CSGO_Cheat_Cleaner;
             this.CSGO_Cheat_Cleaner.Size = new System.Drawing.Size(212, 48);
             this.CSGO_Cheat_Cleaner.TabIndex = 7;
-            this.CSGO_Cheat_Cleaner.Text = "CSGO Cheat Cleaner";
+            this.CSGO_Cheat_Cleaner.Text = "CS:GO Cheat Cleaner";
             this.CSGO_Cheat_Cleaner.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CSGO_Cheat_Cleaner_MouseDown);
             // 
             // CSGO_Cheat_Detector
@@ -139,7 +139,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.CSGO_Cheat_Detector.ShadowDecoration.Parent = this.CSGO_Cheat_Detector;
             this.CSGO_Cheat_Detector.Size = new System.Drawing.Size(212, 48);
             this.CSGO_Cheat_Detector.TabIndex = 4;
-            this.CSGO_Cheat_Detector.Text = "CSGO Cheat Detector";
+            this.CSGO_Cheat_Detector.Text = "CS:GO Cheat Detector";
             this.CSGO_Cheat_Detector.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CSGO_Cheat_Detector_MouseDown);
             // 
             // Drag_Panel
