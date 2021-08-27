@@ -33,6 +33,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Background_Panel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.Clock1 = new System.Windows.Forms.Label();
             this.CSGO_Cheat_Cleaner = new Guna.UI2.WinForms.Guna2GradientButton();
             this.CSGO_Cheat_Detector = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Drag_Panel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -44,9 +45,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Rainbow_Text = new System.Windows.Forms.Timer(this.components);
             this.FormDrag3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLogElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.FormDrag4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
-            this.Clock1 = new System.Windows.Forms.Label();
+            this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -56,7 +56,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormSettings.AnimationInterval = 1000;
             this.FormSettings.BorderRadius = 40;
             this.FormSettings.ContainerControl = this;
-            this.FormSettings.DragStartTransparencyValue = 0.1D;
+            this.FormSettings.DragEndTransparencyValue = 0.9D;
+            this.FormSettings.DragStartTransparencyValue = 0.5D;
             this.FormSettings.HasFormShadow = false;
             // 
             // Background_Panel
@@ -73,6 +74,19 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.ShadowDecoration.Parent = this.Background_Panel;
             this.Background_Panel.Size = new System.Drawing.Size(513, 150);
             this.Background_Panel.TabIndex = 2;
+            // 
+            // Clock1
+            // 
+            this.Clock1.BackColor = System.Drawing.Color.Transparent;
+            this.Clock1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.Clock1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Clock1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clock1.ForeColor = System.Drawing.Color.White;
+            this.Clock1.Location = new System.Drawing.Point(0, 126);
+            this.Clock1.Name = "Clock1";
+            this.Clock1.Size = new System.Drawing.Size(513, 24);
+            this.Clock1.TabIndex = 8;
+            this.Clock1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CSGO_Cheat_Cleaner
             // 
@@ -189,11 +203,19 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // FormDrag
             // 
+            this.FormDrag.DragEndTransparencyValue = 0.9D;
+            this.FormDrag.DragStartTransparencyValue = 0.5D;
             this.FormDrag.TargetControl = this.Background_Panel;
+            this.FormDrag.TransparentWhileDrag = true;
+            this.FormDrag.UseTransparentDrag = true;
             // 
             // FormDrag2
             // 
+            this.FormDrag2.DragEndTransparencyValue = 0.9D;
+            this.FormDrag2.DragStartTransparencyValue = 0.5D;
             this.FormDrag2.TargetControl = this.Drag_Panel;
+            this.FormDrag2.TransparentWhileDrag = true;
+            this.FormDrag2.UseTransparentDrag = true;
             // 
             // Rainbow_Text
             // 
@@ -203,7 +225,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // FormDrag3
             // 
+            this.FormDrag3.DragEndTransparencyValue = 0.9D;
+            this.FormDrag3.DragStartTransparencyValue = 0.5D;
             this.FormDrag3.TargetControl = this.FormNameLabel;
+            this.FormDrag3.TransparentWhileDrag = true;
+            this.FormDrag3.UseTransparentDrag = true;
             // 
             // CheatLogElipse
             // 
@@ -214,18 +240,13 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1Timer.Interval = 1000;
             this.Clock1Timer.Tick += new System.EventHandler(this.Clock1Timer_Tick);
             // 
-            // Clock1
+            // FormDrag5
             // 
-            this.Clock1.BackColor = System.Drawing.Color.Transparent;
-            this.Clock1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.Clock1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Clock1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Clock1.ForeColor = System.Drawing.Color.White;
-            this.Clock1.Location = new System.Drawing.Point(0, 126);
-            this.Clock1.Name = "Clock1";
-            this.Clock1.Size = new System.Drawing.Size(513, 24);
-            this.Clock1.TabIndex = 8;
-            this.Clock1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FormDrag5.DragEndTransparencyValue = 0.9D;
+            this.FormDrag5.DragStartTransparencyValue = 0.5D;
+            this.FormDrag5.TargetControl = this.Clock1;
+            this.FormDrag5.TransparentWhileDrag = true;
+            this.FormDrag5.UseTransparentDrag = true;
             // 
             // Start
             // 
@@ -261,9 +282,9 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Timer Rainbow_Text;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag3;
         private Guna.UI2.WinForms.Guna2Elipse CheatLogElipse;
-        private Guna.UI2.WinForms.Guna2DragControl FormDrag4;
         private Guna.UI2.WinForms.Guna2GradientButton CSGO_Cheat_Cleaner;
         private System.Windows.Forms.Timer Clock1Timer;
         private System.Windows.Forms.Label Clock1;
+        private Guna.UI2.WinForms.Guna2DragControl FormDrag5;
     }
 }

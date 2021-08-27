@@ -47,6 +47,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.CheatLogElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.FormDrag4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
+            this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -220,11 +221,19 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // FormDrag
             // 
+            this.FormDrag.DragEndTransparencyValue = 0.9D;
+            this.FormDrag.DragStartTransparencyValue = 0.5D;
             this.FormDrag.TargetControl = this.Background_Panel;
+            this.FormDrag.TransparentWhileDrag = true;
+            this.FormDrag.UseTransparentDrag = true;
             // 
             // FormDrag2
             // 
+            this.FormDrag2.DragEndTransparencyValue = 0.9D;
+            this.FormDrag2.DragStartTransparencyValue = 0.5D;
             this.FormDrag2.TargetControl = this.Drag_Panel;
+            this.FormDrag2.TransparentWhileDrag = true;
+            this.FormDrag2.UseTransparentDrag = true;
             // 
             // Rainbow_Text
             // 
@@ -234,16 +243,35 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // FormDrag3
             // 
+            this.FormDrag3.DragEndTransparencyValue = 0.9D;
+            this.FormDrag3.DragStartTransparencyValue = 0.5D;
             this.FormDrag3.TargetControl = this.FormNameLabel;
+            this.FormDrag3.TransparentWhileDrag = true;
+            this.FormDrag3.UseTransparentDrag = true;
             // 
             // CheatLogElipse
             // 
             this.CheatLogElipse.BorderRadius = 40;
             // 
+            // FormDrag4
+            // 
+            this.FormDrag4.DragEndTransparencyValue = 0.9D;
+            this.FormDrag4.DragStartTransparencyValue = 0.5D;
+            this.FormDrag4.TransparentWhileDrag = true;
+            this.FormDrag4.UseTransparentDrag = true;
+            // 
             // Clock1Timer
             // 
             this.Clock1Timer.Interval = 1000;
             this.Clock1Timer.Tick += new System.EventHandler(this.Clock1Timer_Tick);
+            // 
+            // FormDrag5
+            // 
+            this.FormDrag5.DragEndTransparencyValue = 0.9D;
+            this.FormDrag5.DragStartTransparencyValue = 0.5D;
+            this.FormDrag5.TargetControl = this.Clock1;
+            this.FormDrag5.TransparentWhileDrag = true;
+            this.FormDrag5.UseTransparentDrag = true;
             // 
             // Exit_Form
             // 
@@ -287,5 +315,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Label Are_You_Sure;
         private System.Windows.Forms.Timer Clock1Timer;
         private System.Windows.Forms.Label Clock1;
+        private Guna.UI2.WinForms.Guna2DragControl FormDrag5;
     }
 }
