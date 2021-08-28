@@ -17,3 +17,49 @@ This application cleans/detects CS:GO cheats. If you want to clean CS:GO cheats,
 7-) And you are ready to go!
 
 8-) Have Fun.
+
+# Cheats #
+
+Osiris
+
+Nixware
+
+Aimfall
+
+GODWARE
+
+PPHUD V3
+
+Aurora-Project
+
+Otc
+
+YeahNot_CS
+
+BlazeHack
+
+Legendware
+
+weave
+
+Aimware
+
+fatality
+
+JustGlow
+
+rawetripp
+
+Pandora
+
+LUCKERBY
+
+sensum
+
+Anubis
+
+Legithook
+
+sByteCSGONew
+
+R41N3W4R3
