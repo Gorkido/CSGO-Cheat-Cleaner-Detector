@@ -166,7 +166,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RainbowText.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RainbowText.ForeColor = System.Drawing.Color.White;
-            this.RainbowText.Location = new System.Drawing.Point(354, 3);
+            this.RainbowText.Location = new System.Drawing.Point(356, 3);
             this.RainbowText.Name = "RainbowText";
             this.RainbowText.Size = new System.Drawing.Size(92, 14);
             this.RainbowText.TabIndex = 15;
@@ -181,7 +181,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowDisableEnable.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.RainbowDisableEnable.CheckedState.InnerColor = System.Drawing.Color.MediumSlateBlue;
             this.RainbowDisableEnable.CheckedState.Parent = this.RainbowDisableEnable;
-            this.RainbowDisableEnable.Location = new System.Drawing.Point(380, 20);
+            this.RainbowDisableEnable.Location = new System.Drawing.Point(382, 20);
             this.RainbowDisableEnable.Name = "RainbowDisableEnable";
             this.RainbowDisableEnable.ShadowDecoration.Parent = this.RainbowDisableEnable;
             this.RainbowDisableEnable.Size = new System.Drawing.Size(35, 20);
@@ -203,7 +203,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowText2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RainbowText2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RainbowText2.ForeColor = System.Drawing.Color.White;
-            this.RainbowText2.Location = new System.Drawing.Point(355, 42);
+            this.RainbowText2.Location = new System.Drawing.Point(358, 41);
             this.RainbowText2.Name = "RainbowText2";
             this.RainbowText2.Size = new System.Drawing.Size(87, 14);
             this.RainbowText2.TabIndex = 16;
