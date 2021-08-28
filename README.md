@@ -32,7 +32,7 @@ PPHUD V3
 
 Aurora-Project
 
-Otc
+One Tap V3
 
 YeahNot_CS
 
