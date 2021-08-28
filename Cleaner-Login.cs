@@ -1,12 +1,21 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
 using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Http;
+using System.Net;
+using System.IO;
 
 namespace CSGO_Cheat_Cleaner_Detector
 {
-    public partial class Start : Form
+    public partial class Cleaner_Login_Form : Form
     {
-        public Start()
+        public Cleaner_Login_Form()
         {
             InitializeComponent();
         }
@@ -17,10 +26,11 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
             FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
-            CSGO_Cheat_Cleaner.ForeColor = Color.FromArgb(r, g, b);
+            Password.ForeColor = Color.FromArgb(r, g, b);
             RainbowText.ForeColor = Color.FromArgb(r, g, b);
-            CSGO_Cheat_Detector.ForeColor = Color.FromArgb(r, g, b);
+            RainbowText2.ForeColor = Color.FromArgb(r, g, b);
             Exit.ForeColor = Color.FromArgb(r, g, b);
+            Login.ForeColor = Color.FromArgb(r, g, b);
             Clock1.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
@@ -47,22 +57,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             Application.Exit();
         }
 
-        private void CSGO_Cheat_Cleaner_MouseDown(object sender, MouseEventArgs e)
-        {
-            Clock1Timer.Enabled = false;
-            Hide();
-            Cleaner_Login_Form openTest = new Cleaner_Login_Form();
-            openTest.Show();
-        }
-
-        private void CSGO_Cheat_Detector_MouseDown(object sender, MouseEventArgs e)
-        {
-            Clock1Timer.Enabled = false;
-            Hide();
-            Detector_Form openTest = new Detector_Form();
-            openTest.Show();
-        }
-
         private void Clock1Timer_Tick(object sender, EventArgs e)
         {
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
@@ -74,12 +68,14 @@ namespace CSGO_Cheat_Cleaner_Detector
             {
                 Rainbow = false;
                 Rainbow_Text.Enabled = false;
-                CSGO_Cheat_Cleaner.ForeColor = Color.White;
-                CSGO_Cheat_Detector.ForeColor = Color.White;
+
+                Login.ForeColor = Color.White;
                 RainbowText.ForeColor = Color.White;
+                RainbowText2.ForeColor = Color.White;
                 FormNameLabel.ForeColor = Color.White;
                 Minimize.ForeColor = Color.White;
                 Exit.ForeColor = Color.White;
+                Password.ForeColor = Color.White;
                 Clock1.ForeColor = Color.White;
             }
             else
@@ -92,11 +88,46 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void RainbowDisableEnable_MouseEnter(object sender, EventArgs e)
         {
             RainbowText.Show();
+            RainbowText2.Show();
         }
 
         private void RainbowDisableEnable_MouseLeave(object sender, EventArgs e)
         {
             RainbowText.Hide();
+            RainbowText2.Hide();
+        }
+
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            string URL = "https://textuploader.com/taqdi/raw";
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                Stream receiveStream = response.GetResponseStream();
+                StreamReader readStream = null;
+
+                if (response.CharacterSet == null)
+                    readStream = new StreamReader(receiveStream);
+                else
+                    readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
+
+                string data = readStream.ReadToEnd();
+                response.Close();
+                readStream.Close();
+
+                if (Password.Text == data)
+                {
+                    MessageBox.Show("Password Is Correct!");
+                    Hide();
+                    Cleaner_Form openTest = new Cleaner_Form();
+                    openTest.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Password Is Incorrect");
+                }
+            }
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
