@@ -204,8 +204,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             // Temporary Folders
             string[] Temporary = {
                 Temp,
-                Temp2,
-                Recent + "\\",
+                //Temp2,
+                Recent + "\\", //lol
                 Prefetch
             };
             // Temporary Folders
@@ -242,6 +242,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                         string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
                         string dir2 = @"\Cleaner.bat";
                         ExecuteCommand(sPath + dir2);
+                        CleanLog.Items.Add("Folder cleared: " + Temp2);
                         ClearFolder(dir);
                         CleanLog.Items.Add("Folder cleared: " + dir);
                     }
@@ -308,7 +309,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             Thread.Sleep(1000);
             Extract("CSGO_Cheat_Cleaner_Detector", sPath, "Resources", "Cleaner.bat"); // Extracting "Cleaner.bat"
-            Thread.Sleep(1000);
         }
     }
 }
