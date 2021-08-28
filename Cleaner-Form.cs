@@ -15,6 +15,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             InitializeComponent();
         }
 
+        private bool Rainbow;
         // Clearing folder's content (\)
         private void ClearFolder(string FolderName)
         {
@@ -125,8 +126,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
             Clean.ForeColor = Color.FromArgb(r, g, b);
             CleanLog.ForeColor = Color.FromArgb(r, g, b);
+            CleanLog2.ForeColor = Color.FromArgb(r, g, b);
             Exit.ForeColor = Color.FromArgb(r, g, b);
             Clock1.ForeColor = Color.FromArgb(r, g, b);
+            RainbowText.ForeColor = Color.FromArgb(r, g, b);
+            RainbowText2.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
@@ -223,6 +227,10 @@ namespace CSGO_Cheat_Cleaner_Detector
                         // ignore errors
                     }
                 }
+                else
+                {
+                    CleanLog2.Items.Add("Cheat Cannot Be Found: " + dir);
+                }
             }
 
             foreach (string dir in Temporary)
@@ -251,6 +259,42 @@ namespace CSGO_Cheat_Cleaner_Detector
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
         }
 
+        private void RainbowDisableEnable_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Rainbow == true)
+            {
+                Rainbow = false;
+                Rainbow_Text.Enabled = false;
+
+                Clean.ForeColor = Color.White;
+                CleanLog.ForeColor = Color.White;
+                CleanLog2.ForeColor = Color.White;
+                RainbowText.ForeColor = Color.White;
+                RainbowText2.ForeColor = Color.White;
+                FormNameLabel.ForeColor = Color.White;
+                Minimize.ForeColor = Color.White;
+                Exit.ForeColor = Color.White;
+                Clock1.ForeColor = Color.White;
+            }
+            else
+            {
+                Rainbow = true;
+                Rainbow_Text.Enabled = true;
+            }
+        }
+
+        private void RainbowDisableEnable_MouseEnter(object sender, EventArgs e)
+        {
+            RainbowText.Show();
+            RainbowText2.Show();
+        }
+
+        private void RainbowDisableEnable_MouseLeave(object sender, EventArgs e)
+        {
+            RainbowText.Hide();
+            RainbowText2.Hide();
+        }
+
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -258,6 +302,7 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Form_Load(object sender, EventArgs e)
         {
+            Rainbow = true;
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
             Clock1Timer.Enabled = true;
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);

@@ -12,11 +12,13 @@ namespace CSGO_Cheat_Cleaner_Detector
         }
         // Form Design
         private int r = 0, g = 210, b = 0;
+        private bool Rainbow;
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
             FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
             CSGO_Cheat_Cleaner.ForeColor = Color.FromArgb(r, g, b);
+            RainbowText.ForeColor = Color.FromArgb(r, g, b);
             CSGO_Cheat_Detector.ForeColor = Color.FromArgb(r, g, b);
             Exit.ForeColor = Color.FromArgb(r, g, b);
             Clock1.ForeColor = Color.FromArgb(r, g, b);
@@ -66,6 +68,37 @@ namespace CSGO_Cheat_Cleaner_Detector
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
         }
 
+        private void RainbowDisableEnable_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Rainbow == true)
+            {
+                Rainbow = false;
+                Rainbow_Text.Enabled = false;
+                CSGO_Cheat_Cleaner.ForeColor = Color.White;
+                CSGO_Cheat_Detector.ForeColor = Color.White;
+                RainbowText.ForeColor = Color.White;
+                FormNameLabel.ForeColor = Color.White;
+                Minimize.ForeColor = Color.White;
+                Exit.ForeColor = Color.White;
+                Clock1.ForeColor = Color.White;
+            }
+            else
+            {
+                Rainbow = true;
+                Rainbow_Text.Enabled = true;
+            }
+        }
+
+        private void RainbowDisableEnable_MouseEnter(object sender, EventArgs e)
+        {
+            RainbowText.Show();
+        }
+
+        private void RainbowDisableEnable_MouseLeave(object sender, EventArgs e)
+        {
+            RainbowText.Hide();
+        }
+
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
         {
             WindowState = FormWindowState.Minimized;
@@ -73,6 +106,7 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Form_Load(object sender, EventArgs e)
         {
+            Rainbow = true;
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
             Clock1Timer.Enabled = true;
         }

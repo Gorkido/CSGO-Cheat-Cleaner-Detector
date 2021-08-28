@@ -33,6 +33,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Background_Panel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.RainbowText = new System.Windows.Forms.Label();
+            this.RainbowDisableEnable = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.Clock1 = new System.Windows.Forms.Label();
             this.CSGO_Cheat_Cleaner = new Guna.UI2.WinForms.Guna2GradientButton();
             this.CSGO_Cheat_Detector = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -62,6 +64,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.RainbowText);
+            this.Background_Panel.Controls.Add(this.RainbowDisableEnable);
             this.Background_Panel.Controls.Add(this.Clock1);
             this.Background_Panel.Controls.Add(this.CSGO_Cheat_Cleaner);
             this.Background_Panel.Controls.Add(this.CSGO_Cheat_Detector);
@@ -74,6 +78,43 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.ShadowDecoration.Parent = this.Background_Panel;
             this.Background_Panel.Size = new System.Drawing.Size(513, 150);
             this.Background_Panel.TabIndex = 2;
+            // 
+            // RainbowText
+            // 
+            this.RainbowText.AutoSize = true;
+            this.RainbowText.BackColor = System.Drawing.Color.Transparent;
+            this.RainbowText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RainbowText.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RainbowText.ForeColor = System.Drawing.Color.White;
+            this.RainbowText.Location = new System.Drawing.Point(170, 62);
+            this.RainbowText.Name = "RainbowText";
+            this.RainbowText.Size = new System.Drawing.Size(175, 14);
+            this.RainbowText.TabIndex = 10;
+            this.RainbowText.Text = "Disable / Enable Rainbow Texts";
+            this.RainbowText.Visible = false;
+            // 
+            // RainbowDisableEnable
+            // 
+            this.RainbowDisableEnable.BackColor = System.Drawing.Color.Transparent;
+            this.RainbowDisableEnable.CheckedState.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.RainbowDisableEnable.CheckedState.FillColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RainbowDisableEnable.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.RainbowDisableEnable.CheckedState.InnerColor = System.Drawing.Color.MediumSlateBlue;
+            this.RainbowDisableEnable.CheckedState.Parent = this.RainbowDisableEnable;
+            this.RainbowDisableEnable.Location = new System.Drawing.Point(239, 94);
+            this.RainbowDisableEnable.Name = "RainbowDisableEnable";
+            this.RainbowDisableEnable.ShadowDecoration.Parent = this.RainbowDisableEnable;
+            this.RainbowDisableEnable.Size = new System.Drawing.Size(35, 20);
+            this.RainbowDisableEnable.TabIndex = 9;
+            this.RainbowDisableEnable.Tag = "";
+            this.RainbowDisableEnable.UncheckedState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RainbowDisableEnable.UncheckedState.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.RainbowDisableEnable.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.RainbowDisableEnable.UncheckedState.InnerColor = System.Drawing.SystemColors.ActiveCaption;
+            this.RainbowDisableEnable.UncheckedState.Parent = this.RainbowDisableEnable;
+            this.RainbowDisableEnable.CheckedChanged += new System.EventHandler(this.RainbowDisableEnable_CheckedChanged);
+            this.RainbowDisableEnable.MouseEnter += new System.EventHandler(this.RainbowDisableEnable_MouseEnter);
+            this.RainbowDisableEnable.MouseLeave += new System.EventHandler(this.RainbowDisableEnable_MouseLeave);
             // 
             // Clock1
             // 
@@ -263,6 +304,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Text = "Start";
             this.Load += new System.EventHandler(this.Form_Load);
             this.Background_Panel.ResumeLayout(false);
+            this.Background_Panel.PerformLayout();
             this.Drag_Panel.ResumeLayout(false);
             this.Drag_Panel.PerformLayout();
             this.ResumeLayout(false);
@@ -286,5 +328,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Timer Clock1Timer;
         private System.Windows.Forms.Label Clock1;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag5;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
+        private System.Windows.Forms.Label RainbowText;
     }
 }
