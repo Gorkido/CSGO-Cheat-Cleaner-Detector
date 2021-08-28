@@ -69,9 +69,9 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clock1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clock1.ForeColor = System.Drawing.Color.White;
-            this.Clock1.Location = new System.Drawing.Point(0, 233);
+            this.Clock1.Location = new System.Drawing.Point(0, 198);
             this.Clock1.Name = "Clock1";
-            this.Clock1.Size = new System.Drawing.Size(513, 24);
+            this.Clock1.Size = new System.Drawing.Size(513, 29);
             this.Clock1.TabIndex = 8;
             this.Clock1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -179,7 +179,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.Location = new System.Drawing.Point(0, 0);
             this.Background_Panel.Name = "Background_Panel";
             this.Background_Panel.ShadowDecoration.Parent = this.Background_Panel;
-            this.Background_Panel.Size = new System.Drawing.Size(513, 257);
+            this.Background_Panel.Size = new System.Drawing.Size(513, 227);
             this.Background_Panel.TabIndex = 3;
             // 
             // RainbowText
@@ -283,7 +283,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Login.ForeColor = System.Drawing.Color.White;
             this.Login.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.Login.HoverState.Parent = this.Login;
-            this.Login.Location = new System.Drawing.Point(149, 174);
+            this.Login.Location = new System.Drawing.Point(149, 148);
             this.Login.Name = "Login";
             this.Login.ShadowDecoration.Parent = this.Login;
             this.Login.Size = new System.Drawing.Size(212, 48);
@@ -322,7 +322,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 257);
+            this.ClientSize = new System.Drawing.Size(513, 227);
             this.Controls.Add(this.Background_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
