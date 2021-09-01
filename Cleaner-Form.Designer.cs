@@ -86,13 +86,12 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.Controls.Add(this.Clean);
             this.Background_Panel.Controls.Add(this.CleanLog);
             this.Background_Panel.Controls.Add(this.Drag_Panel);
-            this.Background_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Background_Panel.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.Background_Panel.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
             this.Background_Panel.Location = new System.Drawing.Point(0, 0);
             this.Background_Panel.Name = "Background_Panel";
             this.Background_Panel.ShadowDecoration.Parent = this.Background_Panel;
-            this.Background_Panel.Size = new System.Drawing.Size(800, 450);
+            this.Background_Panel.Size = new System.Drawing.Size(807, 450);
             this.Background_Panel.TabIndex = 1;
             // 
             // Clock1
@@ -104,7 +103,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1.ForeColor = System.Drawing.Color.White;
             this.Clock1.Location = new System.Drawing.Point(0, 398);
             this.Clock1.Name = "Clock1";
-            this.Clock1.Size = new System.Drawing.Size(800, 52);
+            this.Clock1.Size = new System.Drawing.Size(807, 52);
             this.Clock1.TabIndex = 5;
             this.Clock1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -156,7 +155,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Drag_Panel.ShadowDecoration.Depth = 2;
             this.Drag_Panel.ShadowDecoration.Enabled = true;
             this.Drag_Panel.ShadowDecoration.Parent = this.Drag_Panel;
-            this.Drag_Panel.Size = new System.Drawing.Size(800, 58);
+            this.Drag_Panel.Size = new System.Drawing.Size(807, 58);
             this.Drag_Panel.TabIndex = 0;
             // 
             // RainbowText
@@ -228,7 +227,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Minimize.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Minimize.ForeColor = System.Drawing.Color.White;
-            this.Minimize.Location = new System.Drawing.Point(693, 14);
+            this.Minimize.Location = new System.Drawing.Point(700, 13);
             this.Minimize.Name = "Minimize";
             this.Minimize.Size = new System.Drawing.Size(27, 19);
             this.Minimize.TabIndex = 1;
@@ -241,7 +240,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(755, 12);
+            this.Exit.Location = new System.Drawing.Point(762, 12);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(34, 34);
             this.Exit.TabIndex = 0;
@@ -335,7 +334,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(807, 450);
             this.Controls.Add(this.CleanLog2);
             this.Controls.Add(this.Background_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

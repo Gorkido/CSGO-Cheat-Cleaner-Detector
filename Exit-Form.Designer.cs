@@ -73,7 +73,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.Controls.Add(this.Exit_App);
             this.Background_Panel.Controls.Add(this.Cancel);
             this.Background_Panel.Controls.Add(this.Drag_Panel);
-            this.Background_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Background_Panel.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.Background_Panel.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
             this.Background_Panel.Location = new System.Drawing.Point(0, 0);

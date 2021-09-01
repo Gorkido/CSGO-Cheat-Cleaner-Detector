@@ -33,6 +33,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Start));
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Background_Panel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.Application_Downloader = new Guna.UI2.WinForms.Guna2GradientButton();
             this.RainbowText = new System.Windows.Forms.Label();
             this.RainbowDisableEnable = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.Clock1 = new System.Windows.Forms.Label();
@@ -49,8 +50,13 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.CheatLogElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.ContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.restartToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
+            this.ContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // FormSettings
@@ -64,20 +70,47 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.Application_Downloader);
             this.Background_Panel.Controls.Add(this.RainbowText);
             this.Background_Panel.Controls.Add(this.RainbowDisableEnable);
             this.Background_Panel.Controls.Add(this.Clock1);
             this.Background_Panel.Controls.Add(this.CSGO_Cheat_Cleaner);
             this.Background_Panel.Controls.Add(this.CSGO_Cheat_Detector);
             this.Background_Panel.Controls.Add(this.Drag_Panel);
-            this.Background_Panel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Background_Panel.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.Background_Panel.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
             this.Background_Panel.Location = new System.Drawing.Point(0, 0);
             this.Background_Panel.Name = "Background_Panel";
             this.Background_Panel.ShadowDecoration.Parent = this.Background_Panel;
-            this.Background_Panel.Size = new System.Drawing.Size(513, 150);
+            this.Background_Panel.Size = new System.Drawing.Size(513, 204);
             this.Background_Panel.TabIndex = 2;
+            // 
+            // Application_Downloader
+            // 
+            this.Application_Downloader.AutoRoundedCorners = true;
+            this.Application_Downloader.BackColor = System.Drawing.Color.Transparent;
+            this.Application_Downloader.BorderRadius = 23;
+            this.Application_Downloader.CheckedState.Parent = this.Application_Downloader;
+            this.Application_Downloader.CustomImages.Parent = this.Application_Downloader;
+            this.Application_Downloader.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Application_Downloader.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Application_Downloader.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Application_Downloader.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Application_Downloader.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Application_Downloader.DisabledState.Parent = this.Application_Downloader;
+            this.Application_Downloader.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Application_Downloader.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Application_Downloader.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.Application_Downloader.ForeColor = System.Drawing.Color.White;
+            this.Application_Downloader.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Application_Downloader.HoverState.Parent = this.Application_Downloader;
+            this.Application_Downloader.Location = new System.Drawing.Point(150, 133);
+            this.Application_Downloader.Name = "Application_Downloader";
+            this.Application_Downloader.ShadowDecoration.Parent = this.Application_Downloader;
+            this.Application_Downloader.Size = new System.Drawing.Size(212, 48);
+            this.Application_Downloader.TabIndex = 11;
+            this.Application_Downloader.Text = "Applications";
+            this.Application_Downloader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Application_Downloader_MouseDown);
             // 
             // RainbowText
             // 
@@ -101,7 +134,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowDisableEnable.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.RainbowDisableEnable.CheckedState.InnerColor = System.Drawing.Color.MediumSlateBlue;
             this.RainbowDisableEnable.CheckedState.Parent = this.RainbowDisableEnable;
-            this.RainbowDisableEnable.Location = new System.Drawing.Point(239, 94);
+            this.RainbowDisableEnable.Location = new System.Drawing.Point(239, 96);
             this.RainbowDisableEnable.Name = "RainbowDisableEnable";
             this.RainbowDisableEnable.ShadowDecoration.Parent = this.RainbowDisableEnable;
             this.RainbowDisableEnable.Size = new System.Drawing.Size(35, 20);
@@ -123,7 +156,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clock1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clock1.ForeColor = System.Drawing.Color.White;
-            this.Clock1.Location = new System.Drawing.Point(0, 126);
+            this.Clock1.Location = new System.Drawing.Point(0, 180);
             this.Clock1.Name = "Clock1";
             this.Clock1.Size = new System.Drawing.Size(513, 24);
             this.Clock1.TabIndex = 8;
@@ -289,11 +322,45 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag5.TransparentWhileDrag = true;
             this.FormDrag5.UseTransparentDrag = true;
             // 
+            // NotifyIcon
+            // 
+            this.NotifyIcon.ContextMenuStrip = this.ContextMenuStrip;
+            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
+            this.NotifyIcon.Text = "Gorkido\'s Cheat Cleaner / Detector";
+            this.NotifyIcon.Visible = true;
+            // 
+            // ContextMenuStrip
+            // 
+            this.ContextMenuStrip.BackColor = System.Drawing.Color.Transparent;
+            this.ContextMenuStrip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.restartToolStripMenuItem,
+            this.exitToolStripMenuItem});
+            this.ContextMenuStrip.Name = "ContextMenuStrip";
+            this.ContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.ContextMenuStrip.Size = new System.Drawing.Size(121, 48);
+            // 
+            // restartToolStripMenuItem
+            // 
+            this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.restartToolStripMenuItem.Text = "Restart";
+            this.restartToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.restartToolStripMenuItem_MouseDown);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
+            this.exitToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.exitToolStripMenuItem_MouseDown);
+            // 
             // Start
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 150);
+            this.ClientSize = new System.Drawing.Size(513, 204);
             this.Controls.Add(this.Background_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -307,6 +374,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.PerformLayout();
             this.Drag_Panel.ResumeLayout(false);
             this.Drag_Panel.PerformLayout();
+            this.ContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -330,5 +398,10 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2DragControl FormDrag5;
         private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
         private System.Windows.Forms.Label RainbowText;
+        private Guna.UI2.WinForms.Guna2GradientButton Application_Downloader;
+        private System.Windows.Forms.NotifyIcon NotifyIcon;
+        private System.Windows.Forms.ContextMenuStrip ContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem restartToolStripMenuItem;
     }
 }

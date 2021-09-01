@@ -227,6 +227,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application-Downloader-Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Application-Downloader-Form.Designer.cs">
+      <DependentUpon>Application-Downloader-Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cleaner-Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +265,9 @@
     <Compile Include="Start.Designer.cs">
       <DependentUpon>Start.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Application-Downloader-Form.resx">
+      <DependentUpon>Application-Downloader-Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cleaner-Form.resx">
       <DependentUpon>Cleaner-Form.cs</DependentUpon>
     </EmbeddedResource>

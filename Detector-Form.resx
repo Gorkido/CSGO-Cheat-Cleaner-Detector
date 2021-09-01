@@ -4604,9 +4604,9 @@
     <value>411, 52</value>
   </metadata>
   <metadata name="CheatLog2Drag.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>571, 52</value>
+    <value>504, 55</value>
   </metadata>
   <metadata name="CheatLog2Elipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>572, 25</value>
+    <value>453, 26</value>
   </metadata>
 </root>

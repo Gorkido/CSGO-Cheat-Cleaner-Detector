@@ -18,6 +18,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
             CSGO_Cheat_Cleaner.ForeColor = Color.FromArgb(r, g, b);
+            Application_Downloader.ForeColor = Color.FromArgb(r, g, b);
             RainbowText.ForeColor = Color.FromArgb(r, g, b);
             CSGO_Cheat_Detector.ForeColor = Color.FromArgb(r, g, b);
             Exit.ForeColor = Color.FromArgb(r, g, b);
@@ -76,6 +77,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                 Rainbow_Text.Enabled = false;
                 CSGO_Cheat_Cleaner.ForeColor = Color.White;
                 CSGO_Cheat_Detector.ForeColor = Color.White;
+                Application_Downloader.ForeColor = Color.White;
                 RainbowText.ForeColor = Color.White;
                 FormNameLabel.ForeColor = Color.White;
                 Minimize.ForeColor = Color.White;
@@ -97,6 +99,24 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void RainbowDisableEnable_MouseLeave(object sender, EventArgs e)
         {
             RainbowText.Hide();
+        }
+
+        private void Application_Downloader_MouseDown(object sender, MouseEventArgs e)
+        {
+            Rainbow_Text.Enabled = false;
+            Hide();
+            Application_Downloader_Form openTest = new Application_Downloader_Form();
+            openTest.Show();
+        }
+
+        private void exitToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void restartToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
+        {
+            Application.Restart();
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
