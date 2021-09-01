@@ -52,7 +52,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             Clock1Timer.Enabled = false;
             Hide();
-            Cleaner_Login_Form openTest = new Cleaner_Login_Form();
+            Cleaner_Form openTest = new Cleaner_Form();
             openTest.Show();
         }
 

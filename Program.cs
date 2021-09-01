@@ -13,7 +13,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Start());
+            Application.Run(new Login_Form());
         }
     }
 }

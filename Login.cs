@@ -7,9 +7,9 @@ using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
 {
-    public partial class Cleaner_Login_Form : Form
+    public partial class Login_Form : Form
     {
-        public Cleaner_Login_Form()
+        public Login_Form()
         {
             InitializeComponent();
         }
@@ -118,7 +118,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                 {
                     MessageBox.Show("Password Is Correct!");
                     Hide();
-                    Cleaner_Form openTest = new Cleaner_Form();
+                    Start openTest = new Start();
                     openTest.Show();
                 }
                 else

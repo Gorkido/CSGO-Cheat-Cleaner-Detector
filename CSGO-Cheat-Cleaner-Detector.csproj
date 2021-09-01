@@ -271,11 +271,11 @@
     <Compile Include="Exit-Form.Designer.cs">
       <DependentUpon>Exit-Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cleaner-Login.cs">
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cleaner-Login.Designer.cs">
-      <DependentUpon>Cleaner-Login.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -297,8 +297,8 @@
     <EmbeddedResource Include="Exit-Form.resx">
       <DependentUpon>Exit-Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cleaner-Login.resx">
-      <DependentUpon>Cleaner-Login.cs</DependentUpon>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

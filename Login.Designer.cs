@@ -1,7 +1,7 @@
 ﻿
 namespace CSGO_Cheat_Cleaner_Detector
 {
-    partial class Cleaner_Login_Form
+    partial class Login_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -91,9 +91,9 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormNameLabel.ForeColor = System.Drawing.Color.White;
             this.FormNameLabel.Location = new System.Drawing.Point(9, 17);
             this.FormNameLabel.Name = "FormNameLabel";
-            this.FormNameLabel.Size = new System.Drawing.Size(318, 24);
+            this.FormNameLabel.Size = new System.Drawing.Size(422, 24);
             this.FormNameLabel.TabIndex = 2;
-            this.FormNameLabel.Text = "Gorkido\'s Cheat Cleaner Login";
+            this.FormNameLabel.Text = "Gorkido\'s Cheat Cleaner / Detector Login";
             // 
             // Rainbow_Text
             // 
@@ -318,7 +318,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag4.TransparentWhileDrag = true;
             this.FormDrag4.UseTransparentDrag = true;
             // 
-            // Cleaner_Login_Form
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -326,7 +326,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Controls.Add(this.Background_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
-            this.Name = "Cleaner_Login_Form";
+            this.Name = "Login_Form";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
