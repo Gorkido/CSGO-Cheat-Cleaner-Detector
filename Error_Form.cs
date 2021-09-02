@@ -1,32 +1,27 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
-using System.Net;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
 {
-    public partial class Login_Form : Form
+    public partial class Error_Form : Form
     {
-        public Login_Form()
+        public Error_Form()
         {
             InitializeComponent();
         }
         // Form Design
         private int r = 0, g = 210, b = 0;
         private bool Rainbow;
-
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
             FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
-            Password.ForeColor = Color.FromArgb(r, g, b);
+            Exit.ForeColor = Color.FromArgb(r, g, b);
+            Wrong_Pass_Label.ForeColor = Color.FromArgb(r, g, b);
             RainbowText.ForeColor = Color.FromArgb(r, g, b);
             RainbowText2.ForeColor = Color.FromArgb(r, g, b);
-            Exit.ForeColor = Color.FromArgb(r, g, b);
-            Login.ForeColor = Color.FromArgb(r, g, b);
             Clock1.ForeColor = Color.FromArgb(r, g, b);
-            Minimize.ForeColor = Color.FromArgb(r, g, b);
+            Try_Again.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
                 r--;
@@ -45,15 +40,17 @@ namespace CSGO_Cheat_Cleaner_Detector
             // Form Design
         }
 
-        private void Exit_MouseDown(object sender, MouseEventArgs e)
-        {
-            Clock1Timer.Enabled = false;
-            Application.Exit();
-        }
-
         private void Clock1Timer_Tick(object sender, EventArgs e)
         {
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
+        }
+
+        private void Exit_MouseDown(object sender, MouseEventArgs e)
+        {
+            Clock1Timer.Enabled = false;
+            Hide();
+            Login_Form OpenForm = new Login_Form();
+            OpenForm.Show();
         }
 
         private void RainbowDisableEnable_CheckedChanged(object sender, EventArgs e)
@@ -62,14 +59,12 @@ namespace CSGO_Cheat_Cleaner_Detector
             {
                 Rainbow = false;
                 Rainbow_Text.Enabled = false;
-
-                Login.ForeColor = Color.White;
+                Wrong_Pass_Label.ForeColor = Color.White;
+                Try_Again.ForeColor = Color.White;
                 RainbowText.ForeColor = Color.White;
                 RainbowText2.ForeColor = Color.White;
-                FormNameLabel.ForeColor = Color.White;
-                Minimize.ForeColor = Color.White;
+                FormNameLabel.ForeColor = Color.Red;
                 Exit.ForeColor = Color.White;
-                Password.ForeColor = Color.White;
                 Clock1.ForeColor = Color.White;
             }
             else
@@ -91,42 +86,12 @@ namespace CSGO_Cheat_Cleaner_Detector
             RainbowText2.Hide();
         }
 
-        private void Login_MouseDown(object sender, MouseEventArgs e)
+        private void Try_Again_MouseDown(object sender, MouseEventArgs e)
         {
-            string URL = "https://textuploader.com/taqdi/raw";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            if (response.StatusCode == HttpStatusCode.OK)
-            {
-                Stream receiveStream = response.GetResponseStream();
-                StreamReader readStream = null;
-
-                if (response.CharacterSet == null)
-                {
-                    readStream = new StreamReader(receiveStream);
-                }
-                else
-                {
-                    readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
-                }
-
-                string data = readStream.ReadToEnd();
-                response.Close();
-                readStream.Close();
-
-                if (Password.Text == data)
-                {
-                    Login_Information OpenForm = new Login_Information();
-                    OpenForm.Show();
-                    Hide();
-                }
-                else
-                {
-                    Error_Form OpenForm = new Error_Form();
-                    OpenForm.Show();
-                    Hide();
-                }
-            }
+            Clock1Timer.Enabled = false;
+            Hide();
+            Login_Form OpenForm = new Login_Form();
+            OpenForm.Show();
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)

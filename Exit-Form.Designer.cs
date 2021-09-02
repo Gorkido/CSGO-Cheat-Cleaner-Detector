@@ -47,8 +47,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Rainbow_Text = new System.Windows.Forms.Timer(this.components);
             this.FormDrag3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.CheatLogElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.FormDrag4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Background_Panel.SuspendLayout();
@@ -301,17 +299,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag3.TransparentWhileDrag = true;
             this.FormDrag3.UseTransparentDrag = true;
             // 
-            // CheatLogElipse
-            // 
-            this.CheatLogElipse.BorderRadius = 40;
-            // 
-            // FormDrag4
-            // 
-            this.FormDrag4.DragEndTransparencyValue = 0.9D;
-            this.FormDrag4.DragStartTransparencyValue = 0.5D;
-            this.FormDrag4.TransparentWhileDrag = true;
-            this.FormDrag4.UseTransparentDrag = true;
-            // 
             // Clock1Timer
             // 
             this.Clock1Timer.Interval = 1000;
@@ -361,8 +348,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2DragControl FormDrag2;
         private System.Windows.Forms.Timer Rainbow_Text;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag3;
-        private Guna.UI2.WinForms.Guna2Elipse CheatLogElipse;
-        private Guna.UI2.WinForms.Guna2DragControl FormDrag4;
         private Guna.UI2.WinForms.Guna2GradientButton Exit_App;
         private System.Windows.Forms.Label Are_You_Sure;
         private System.Windows.Forms.Timer Clock1Timer;

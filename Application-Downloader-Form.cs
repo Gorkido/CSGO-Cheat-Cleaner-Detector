@@ -65,8 +65,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             {
                 Directory.Delete(sPath + dir2, true);// Deleting %temp%\Gorkido_Stuff\Gorkido_Downloads
             }
-            Start openTest = new Start();
-            openTest.Show();
+            Start OpenForm = new Start();
+            OpenForm.Show();
         }
 
         private void Clock1Timer_Tick(object sender, EventArgs e)

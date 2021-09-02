@@ -152,8 +152,8 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
-            Exit_Form openTest = new Exit_Form();
-            openTest.Show();
+            Exit_Form OpenForm = new Exit_Form();
+            OpenForm.Show();
         }
 
         private void Clean_MouseDown(object sender, MouseEventArgs e)

@@ -45,23 +45,24 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Application.Exit();
+            Exit_Form OpenForm = new Exit_Form();
+            OpenForm.Show();
         }
 
         private void CSGO_Cheat_Cleaner_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
             Hide();
-            Cleaner_Form openTest = new Cleaner_Form();
-            openTest.Show();
+            Cleaner_Form OpenForm = new Cleaner_Form();
+            OpenForm.Show();
         }
 
         private void CSGO_Cheat_Detector_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
             Hide();
-            Detector_Form openTest = new Detector_Form();
-            openTest.Show();
+            Detector_Form OpenForm = new Detector_Form();
+            OpenForm.Show();
         }
 
         private void Clock1Timer_Tick(object sender, EventArgs e)
@@ -105,8 +106,8 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             Rainbow_Text.Enabled = false;
             Hide();
-            Application_Downloader_Form openTest = new Application_Downloader_Form();
-            openTest.Show();
+            Application_Downloader_Form OpenForm = new Application_Downloader_Form();
+            OpenForm.Show();
         }
 
         private void exitToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)

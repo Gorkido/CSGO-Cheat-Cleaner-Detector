@@ -1,7 +1,7 @@
 ﻿
 namespace CSGO_Cheat_Cleaner_Detector
 {
-    partial class Login_Form
+    partial class Login_Information
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Information));
             this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Clock1 = new System.Windows.Forms.Label();
             this.FormDrag3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -38,19 +38,17 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Rainbow_Text = new System.Windows.Forms.Timer(this.components);
             this.FormDrag2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drag_Panel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.Minimize = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Label();
             this.FormDrag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Background_Panel = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.RainbowText = new System.Windows.Forms.Label();
-            this.RainbowText2 = new System.Windows.Forms.Label();
             this.RainbowDisableEnable = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.Password = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Login = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.RainbowText2 = new System.Windows.Forms.Label();
+            this.Are_You_Sure = new System.Windows.Forms.Label();
+            this.Continue_App = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Cancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.TextBoxElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.FormDrag4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drag_Panel.SuspendLayout();
             this.Background_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -70,10 +68,10 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Clock1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Clock1.ForeColor = System.Drawing.Color.White;
-            this.Clock1.Location = new System.Drawing.Point(0, 198);
+            this.Clock1.Location = new System.Drawing.Point(0, 160);
             this.Clock1.Name = "Clock1";
-            this.Clock1.Size = new System.Drawing.Size(514, 29);
-            this.Clock1.TabIndex = 8;
+            this.Clock1.Size = new System.Drawing.Size(353, 24);
+            this.Clock1.TabIndex = 7;
             this.Clock1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormDrag3
@@ -92,9 +90,9 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormNameLabel.ForeColor = System.Drawing.Color.White;
             this.FormNameLabel.Location = new System.Drawing.Point(9, 17);
             this.FormNameLabel.Name = "FormNameLabel";
-            this.FormNameLabel.Size = new System.Drawing.Size(422, 24);
+            this.FormNameLabel.Size = new System.Drawing.Size(125, 24);
             this.FormNameLabel.TabIndex = 2;
-            this.FormNameLabel.Text = "Gorkido\'s Cheat Cleaner / Detector Login";
+            this.FormNameLabel.Text = "Information";
             // 
             // Rainbow_Text
             // 
@@ -115,7 +113,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Drag_Panel.BackColor = System.Drawing.Color.Transparent;
             this.Drag_Panel.BorderRadius = 20;
             this.Drag_Panel.Controls.Add(this.FormNameLabel);
-            this.Drag_Panel.Controls.Add(this.Minimize);
             this.Drag_Panel.Controls.Add(this.Exit);
             this.Drag_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Drag_Panel.FillColor = System.Drawing.Color.MediumSlateBlue;
@@ -128,21 +125,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Drag_Panel.ShadowDecoration.Depth = 2;
             this.Drag_Panel.ShadowDecoration.Enabled = true;
             this.Drag_Panel.ShadowDecoration.Parent = this.Drag_Panel;
-            this.Drag_Panel.Size = new System.Drawing.Size(514, 58);
+            this.Drag_Panel.Size = new System.Drawing.Size(353, 58);
             this.Drag_Panel.TabIndex = 0;
-            // 
-            // Minimize
-            // 
-            this.Minimize.AutoSize = true;
-            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Minimize.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Minimize.ForeColor = System.Drawing.Color.White;
-            this.Minimize.Location = new System.Drawing.Point(436, 13);
-            this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(27, 19);
-            this.Minimize.TabIndex = 1;
-            this.Minimize.Text = "__";
-            this.Minimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Minimize_MouseDown);
             // 
             // Exit
             // 
@@ -150,7 +134,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Exit.Font = new System.Drawing.Font("Arial", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Exit.ForeColor = System.Drawing.Color.White;
-            this.Exit.Location = new System.Drawing.Point(472, 12);
+            this.Exit.Location = new System.Drawing.Point(309, 14);
             this.Exit.Name = "Exit";
             this.Exit.Size = new System.Drawing.Size(34, 34);
             this.Exit.TabIndex = 0;
@@ -168,19 +152,20 @@ namespace CSGO_Cheat_Cleaner_Detector
             // Background_Panel
             // 
             this.Background_Panel.Controls.Add(this.RainbowText);
-            this.Background_Panel.Controls.Add(this.RainbowText2);
             this.Background_Panel.Controls.Add(this.RainbowDisableEnable);
-            this.Background_Panel.Controls.Add(this.Password);
+            this.Background_Panel.Controls.Add(this.RainbowText2);
             this.Background_Panel.Controls.Add(this.Clock1);
-            this.Background_Panel.Controls.Add(this.Login);
+            this.Background_Panel.Controls.Add(this.Are_You_Sure);
+            this.Background_Panel.Controls.Add(this.Continue_App);
+            this.Background_Panel.Controls.Add(this.Cancel);
             this.Background_Panel.Controls.Add(this.Drag_Panel);
             this.Background_Panel.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.Background_Panel.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
-            this.Background_Panel.Location = new System.Drawing.Point(-1, 0);
+            this.Background_Panel.Location = new System.Drawing.Point(0, 0);
             this.Background_Panel.Name = "Background_Panel";
             this.Background_Panel.ShadowDecoration.Parent = this.Background_Panel;
-            this.Background_Panel.Size = new System.Drawing.Size(514, 227);
-            this.Background_Panel.TabIndex = 3;
+            this.Background_Panel.Size = new System.Drawing.Size(353, 184);
+            this.Background_Panel.TabIndex = 2;
             // 
             // RainbowText
             // 
@@ -189,26 +174,12 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowText.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RainbowText.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RainbowText.ForeColor = System.Drawing.Color.White;
-            this.RainbowText.Location = new System.Drawing.Point(145, 70);
+            this.RainbowText.Location = new System.Drawing.Point(130, 107);
             this.RainbowText.Name = "RainbowText";
             this.RainbowText.Size = new System.Drawing.Size(92, 14);
-            this.RainbowText.TabIndex = 20;
+            this.RainbowText.TabIndex = 18;
             this.RainbowText.Text = "Disable / Enable";
             this.RainbowText.Visible = false;
-            // 
-            // RainbowText2
-            // 
-            this.RainbowText2.AutoSize = true;
-            this.RainbowText2.BackColor = System.Drawing.Color.Transparent;
-            this.RainbowText2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RainbowText2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RainbowText2.ForeColor = System.Drawing.Color.White;
-            this.RainbowText2.Location = new System.Drawing.Point(276, 70);
-            this.RainbowText2.Name = "RainbowText2";
-            this.RainbowText2.Size = new System.Drawing.Size(87, 14);
-            this.RainbowText2.TabIndex = 21;
-            this.RainbowText2.Text = "Rainbow Texts";
-            this.RainbowText2.Visible = false;
             // 
             // RainbowDisableEnable
             // 
@@ -218,11 +189,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowDisableEnable.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.RainbowDisableEnable.CheckedState.InnerColor = System.Drawing.Color.MediumSlateBlue;
             this.RainbowDisableEnable.CheckedState.Parent = this.RainbowDisableEnable;
-            this.RainbowDisableEnable.Location = new System.Drawing.Point(238, 67);
+            this.RainbowDisableEnable.Location = new System.Drawing.Point(156, 124);
             this.RainbowDisableEnable.Name = "RainbowDisableEnable";
             this.RainbowDisableEnable.ShadowDecoration.Parent = this.RainbowDisableEnable;
             this.RainbowDisableEnable.Size = new System.Drawing.Size(35, 20);
-            this.RainbowDisableEnable.TabIndex = 11;
+            this.RainbowDisableEnable.TabIndex = 17;
             this.RainbowDisableEnable.Tag = "";
             this.RainbowDisableEnable.UncheckedState.BorderColor = System.Drawing.SystemColors.ActiveCaption;
             this.RainbowDisableEnable.UncheckedState.FillColor = System.Drawing.Color.MediumSlateBlue;
@@ -233,63 +204,86 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowDisableEnable.MouseEnter += new System.EventHandler(this.RainbowDisableEnable_MouseEnter);
             this.RainbowDisableEnable.MouseLeave += new System.EventHandler(this.RainbowDisableEnable_MouseLeave);
             // 
-            // Password
+            // RainbowText2
             // 
-            this.Password.BackColor = System.Drawing.Color.Transparent;
-            this.Password.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.Password.BorderRadius = 22;
-            this.Password.BorderThickness = 2;
-            this.Password.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.Password.DefaultText = "";
-            this.Password.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.Password.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.Password.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Password.DisabledState.Parent = this.Password;
-            this.Password.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.Password.FillColor = System.Drawing.SystemColors.ActiveCaption;
-            this.Password.FocusedState.BorderColor = System.Drawing.Color.Transparent;
-            this.Password.FocusedState.Parent = this.Password;
-            this.Password.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Password.ForeColor = System.Drawing.Color.White;
-            this.Password.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.Password.HoverState.Parent = this.Password;
-            this.Password.Location = new System.Drawing.Point(59, 93);
-            this.Password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Password.Name = "Password";
-            this.Password.PasswordChar = '\0';
-            this.Password.PlaceholderText = "";
-            this.Password.SelectedText = "";
-            this.Password.ShadowDecoration.Parent = this.Password;
-            this.Password.Size = new System.Drawing.Size(388, 46);
-            this.Password.TabIndex = 10;
-            this.Password.UseSystemPasswordChar = true;
+            this.RainbowText2.AutoSize = true;
+            this.RainbowText2.BackColor = System.Drawing.Color.Transparent;
+            this.RainbowText2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RainbowText2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RainbowText2.ForeColor = System.Drawing.Color.White;
+            this.RainbowText2.Location = new System.Drawing.Point(131, 146);
+            this.RainbowText2.Name = "RainbowText2";
+            this.RainbowText2.Size = new System.Drawing.Size(87, 14);
+            this.RainbowText2.TabIndex = 19;
+            this.RainbowText2.Text = "Rainbow Texts";
+            this.RainbowText2.Visible = false;
             // 
-            // Login
+            // Are_You_Sure
             // 
-            this.Login.AutoRoundedCorners = true;
-            this.Login.BackColor = System.Drawing.Color.Transparent;
-            this.Login.BorderRadius = 23;
-            this.Login.CheckedState.Parent = this.Login;
-            this.Login.CustomImages.Parent = this.Login;
-            this.Login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Login.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Login.DisabledState.Parent = this.Login;
-            this.Login.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.Login.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
-            this.Login.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login.ForeColor = System.Drawing.Color.White;
-            this.Login.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.Login.HoverState.Parent = this.Login;
-            this.Login.Location = new System.Drawing.Point(149, 148);
-            this.Login.Name = "Login";
-            this.Login.ShadowDecoration.Parent = this.Login;
-            this.Login.Size = new System.Drawing.Size(212, 48);
-            this.Login.TabIndex = 7;
-            this.Login.Text = "Login";
-            this.Login.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            this.Are_You_Sure.AutoSize = true;
+            this.Are_You_Sure.BackColor = System.Drawing.Color.Transparent;
+            this.Are_You_Sure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Are_You_Sure.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Are_You_Sure.ForeColor = System.Drawing.Color.White;
+            this.Are_You_Sure.Location = new System.Drawing.Point(121, 72);
+            this.Are_You_Sure.Name = "Are_You_Sure";
+            this.Are_You_Sure.Size = new System.Drawing.Size(104, 24);
+            this.Are_You_Sure.TabIndex = 6;
+            this.Are_You_Sure.Text = "Success!";
+            // 
+            // Continue_App
+            // 
+            this.Continue_App.AutoRoundedCorners = true;
+            this.Continue_App.BackColor = System.Drawing.Color.Transparent;
+            this.Continue_App.BorderRadius = 23;
+            this.Continue_App.CheckedState.Parent = this.Continue_App;
+            this.Continue_App.CustomImages.Parent = this.Continue_App;
+            this.Continue_App.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Continue_App.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Continue_App.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Continue_App.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Continue_App.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Continue_App.DisabledState.Parent = this.Continue_App;
+            this.Continue_App.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Continue_App.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Continue_App.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Continue_App.ForeColor = System.Drawing.Color.White;
+            this.Continue_App.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Continue_App.HoverState.Parent = this.Continue_App;
+            this.Continue_App.Location = new System.Drawing.Point(25, 110);
+            this.Continue_App.Name = "Continue_App";
+            this.Continue_App.ShadowDecoration.Parent = this.Continue_App;
+            this.Continue_App.Size = new System.Drawing.Size(97, 48);
+            this.Continue_App.TabIndex = 5;
+            this.Continue_App.Text = "OK";
+            this.Continue_App.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Continue_App_MouseDown);
+            // 
+            // Cancel
+            // 
+            this.Cancel.AutoRoundedCorners = true;
+            this.Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.Cancel.BorderRadius = 23;
+            this.Cancel.CheckedState.Parent = this.Cancel;
+            this.Cancel.CustomImages.Parent = this.Cancel;
+            this.Cancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Cancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Cancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Cancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Cancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Cancel.DisabledState.Parent = this.Cancel;
+            this.Cancel.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Cancel.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Cancel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancel.ForeColor = System.Drawing.Color.White;
+            this.Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Cancel.HoverState.Parent = this.Cancel;
+            this.Cancel.Location = new System.Drawing.Point(224, 110);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.ShadowDecoration.Parent = this.Cancel;
+            this.Cancel.Size = new System.Drawing.Size(97, 48);
+            this.Cancel.TabIndex = 4;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Cancel_MouseDown);
             // 
             // Clock1Timer
             // 
@@ -301,36 +295,22 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormSettings.AnimationInterval = 1000;
             this.FormSettings.BorderRadius = 40;
             this.FormSettings.ContainerControl = this;
-            this.FormSettings.DragEndTransparencyValue = 0.9D;
-            this.FormSettings.DragStartTransparencyValue = 0.5D;
+            this.FormSettings.DragStartTransparencyValue = 0.1D;
             this.FormSettings.HasFormShadow = false;
             // 
-            // TextBoxElipse
-            // 
-            this.TextBoxElipse.BorderRadius = 40;
-            this.TextBoxElipse.TargetControl = this.Password;
-            // 
-            // FormDrag4
-            // 
-            this.FormDrag4.DragEndTransparencyValue = 0.9D;
-            this.FormDrag4.DragStartTransparencyValue = 0.5D;
-            this.FormDrag4.TargetControl = this.Password;
-            this.FormDrag4.TransparentWhileDrag = true;
-            this.FormDrag4.UseTransparentDrag = true;
-            // 
-            // Login_Form
+            // Login_Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 227);
+            this.ClientSize = new System.Drawing.Size(353, 184);
             this.Controls.Add(this.Background_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Login_Form";
+            this.Name = "Login_Information";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Login_Information";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form_Load);
             this.Drag_Panel.ResumeLayout(false);
@@ -350,18 +330,16 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Timer Rainbow_Text;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag2;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel Drag_Panel;
-        private System.Windows.Forms.Label Minimize;
         private System.Windows.Forms.Label Exit;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag;
         private Guna.UI2.WinForms.Guna2GradientPanel Background_Panel;
-        private Guna.UI2.WinForms.Guna2GradientButton Login;
+        private System.Windows.Forms.Label RainbowText;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
+        private System.Windows.Forms.Label RainbowText2;
+        private System.Windows.Forms.Label Are_You_Sure;
+        private Guna.UI2.WinForms.Guna2GradientButton Continue_App;
+        private Guna.UI2.WinForms.Guna2GradientButton Cancel;
         private System.Windows.Forms.Timer Clock1Timer;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormSettings;
-        private Guna.UI2.WinForms.Guna2Elipse TextBoxElipse;
-        private Guna.UI2.WinForms.Guna2TextBox Password;
-        private Guna.UI2.WinForms.Guna2DragControl FormDrag4;
-        private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
-        private System.Windows.Forms.Label RainbowText;
-        private System.Windows.Forms.Label RainbowText2;
     }
 }

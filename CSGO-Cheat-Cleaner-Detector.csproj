@@ -265,11 +265,23 @@
     <Compile Include="Detector-Form.Designer.cs">
       <DependentUpon>Detector-Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Error_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Error_Form.Designer.cs">
+      <DependentUpon>Error_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exit-Form.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Exit-Form.Designer.cs">
       <DependentUpon>Exit-Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login-Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login-Information.Designer.cs">
+      <DependentUpon>Login-Information.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -294,8 +306,14 @@
     <EmbeddedResource Include="Detector-Form.resx">
       <DependentUpon>Detector-Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Error_Form.resx">
+      <DependentUpon>Error_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Exit-Form.resx">
       <DependentUpon>Exit-Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login-Information.resx">
+      <DependentUpon>Login-Information.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
