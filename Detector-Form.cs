@@ -30,6 +30,10 @@ namespace CSGO_Cheat_Cleaner_Detector
             CSGOFolder.ForeColor = Color.FromArgb(r, g, b);
             Appdata.ForeColor = Color.FromArgb(r, g, b);
             Prefetch.ForeColor = Color.FromArgb(r, g, b);
+            Documents.ForeColor = Color.FromArgb(r, g, b);
+            C_Disk.ForeColor = Color.FromArgb(r, g, b);
+            ProgramFilesX86.ForeColor = Color.FromArgb(r, g, b);
+            ProgramFiles.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
@@ -206,6 +210,10 @@ namespace CSGO_Cheat_Cleaner_Detector
                 CSGOFolder.ForeColor = Color.White;
                 Prefetch.ForeColor = Color.White;
                 Appdata.ForeColor = Color.White;
+                ProgramFiles.ForeColor = Color.White;
+                ProgramFilesX86.ForeColor = Color.White;
+                Documents.ForeColor = Color.White;
+                C_Disk.ForeColor = Color.White;
                 Clock1.ForeColor = Color.White;
             }
             else
@@ -325,6 +333,21 @@ namespace CSGO_Cheat_Cleaner_Detector
             if (Directory.Exists(ProgramFilesX86))
             {
                 Process.Start(ProgramFilesX86);
+            }
+            else
+            {
+                MessageBox.Show("Program Files (X86) Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
+        }
+
+        private void ProgramFiles_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string ProgramFiles = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles);
+            // Folder Location
+            if (Directory.Exists(ProgramFiles))
+            {
+                Process.Start(ProgramFiles);
             }
             else
             {
