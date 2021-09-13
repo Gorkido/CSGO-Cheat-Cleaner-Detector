@@ -54,6 +54,14 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLog2Drag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLog2Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.Appdata = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Prefetch = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.CSGOFolder = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Recent = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Documents = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.ProgramFilesX86 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.C_Disk = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +76,14 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.guna2GradientButton1);
+            this.Background_Panel.Controls.Add(this.Documents);
+            this.Background_Panel.Controls.Add(this.ProgramFilesX86);
+            this.Background_Panel.Controls.Add(this.C_Disk);
+            this.Background_Panel.Controls.Add(this.CSGOFolder);
+            this.Background_Panel.Controls.Add(this.Recent);
+            this.Background_Panel.Controls.Add(this.Prefetch);
+            this.Background_Panel.Controls.Add(this.Appdata);
             this.Background_Panel.Controls.Add(this.CheatLog2);
             this.Background_Panel.Controls.Add(this.Clock1);
             this.Background_Panel.Controls.Add(this.Find);
@@ -331,6 +347,221 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.CheatLog2Elipse.BorderRadius = 40;
             this.CheatLog2Elipse.TargetControl = this.CheatLog2;
             // 
+            // Appdata
+            // 
+            this.Appdata.AutoRoundedCorners = true;
+            this.Appdata.BackColor = System.Drawing.Color.Transparent;
+            this.Appdata.BorderRadius = 23;
+            this.Appdata.CheckedState.Parent = this.Appdata;
+            this.Appdata.CustomImages.Parent = this.Appdata;
+            this.Appdata.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Appdata.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Appdata.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Appdata.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Appdata.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Appdata.DisabledState.Parent = this.Appdata;
+            this.Appdata.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Appdata.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Appdata.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Appdata.ForeColor = System.Drawing.Color.White;
+            this.Appdata.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Appdata.HoverState.Parent = this.Appdata;
+            this.Appdata.Location = new System.Drawing.Point(29, 61);
+            this.Appdata.Name = "Appdata";
+            this.Appdata.ShadowDecoration.Parent = this.Appdata;
+            this.Appdata.Size = new System.Drawing.Size(106, 48);
+            this.Appdata.TabIndex = 8;
+            this.Appdata.Text = "Appdata";
+            this.Appdata.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Appdata_MouseDown);
+            // 
+            // Prefetch
+            // 
+            this.Prefetch.AutoRoundedCorners = true;
+            this.Prefetch.BackColor = System.Drawing.Color.Transparent;
+            this.Prefetch.BorderRadius = 23;
+            this.Prefetch.CheckedState.Parent = this.Prefetch;
+            this.Prefetch.CustomImages.Parent = this.Prefetch;
+            this.Prefetch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Prefetch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Prefetch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Prefetch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Prefetch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Prefetch.DisabledState.Parent = this.Prefetch;
+            this.Prefetch.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Prefetch.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Prefetch.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Prefetch.ForeColor = System.Drawing.Color.White;
+            this.Prefetch.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Prefetch.HoverState.Parent = this.Prefetch;
+            this.Prefetch.Location = new System.Drawing.Point(539, 61);
+            this.Prefetch.Name = "Prefetch";
+            this.Prefetch.ShadowDecoration.Parent = this.Prefetch;
+            this.Prefetch.Size = new System.Drawing.Size(106, 48);
+            this.Prefetch.TabIndex = 9;
+            this.Prefetch.Text = "Prefetch";
+            this.Prefetch.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Prefetch_MouseDown);
+            // 
+            // CSGOFolder
+            // 
+            this.CSGOFolder.AutoRoundedCorners = true;
+            this.CSGOFolder.BackColor = System.Drawing.Color.Transparent;
+            this.CSGOFolder.BorderRadius = 23;
+            this.CSGOFolder.CheckedState.Parent = this.CSGOFolder;
+            this.CSGOFolder.CustomImages.Parent = this.CSGOFolder;
+            this.CSGOFolder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.CSGOFolder.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.CSGOFolder.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CSGOFolder.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.CSGOFolder.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.CSGOFolder.DisabledState.Parent = this.CSGOFolder;
+            this.CSGOFolder.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.CSGOFolder.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.CSGOFolder.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CSGOFolder.ForeColor = System.Drawing.Color.White;
+            this.CSGOFolder.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.CSGOFolder.HoverState.Parent = this.CSGOFolder;
+            this.CSGOFolder.Location = new System.Drawing.Point(673, 62);
+            this.CSGOFolder.Name = "CSGOFolder";
+            this.CSGOFolder.ShadowDecoration.Parent = this.CSGOFolder;
+            this.CSGOFolder.Size = new System.Drawing.Size(106, 48);
+            this.CSGOFolder.TabIndex = 11;
+            this.CSGOFolder.Text = "CS:GO Folder";
+            this.CSGOFolder.MouseDown += new System.Windows.Forms.MouseEventHandler(this.CSGOFolder_MouseDown);
+            // 
+            // Recent
+            // 
+            this.Recent.AutoRoundedCorners = true;
+            this.Recent.BackColor = System.Drawing.Color.Transparent;
+            this.Recent.BorderRadius = 23;
+            this.Recent.CheckedState.Parent = this.Recent;
+            this.Recent.CustomImages.Parent = this.Recent;
+            this.Recent.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Recent.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Recent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Recent.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Recent.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Recent.DisabledState.Parent = this.Recent;
+            this.Recent.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Recent.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Recent.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Recent.ForeColor = System.Drawing.Color.White;
+            this.Recent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Recent.HoverState.Parent = this.Recent;
+            this.Recent.Location = new System.Drawing.Point(164, 62);
+            this.Recent.Name = "Recent";
+            this.Recent.ShadowDecoration.Parent = this.Recent;
+            this.Recent.Size = new System.Drawing.Size(106, 48);
+            this.Recent.TabIndex = 10;
+            this.Recent.Text = "Recent";
+            this.Recent.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Recent_MouseDown);
+            // 
+            // guna2GradientButton1
+            // 
+            this.guna2GradientButton1.AutoRoundedCorners = true;
+            this.guna2GradientButton1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2GradientButton1.BorderRadius = 23;
+            this.guna2GradientButton1.CheckedState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.CustomImages.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2GradientButton1.DisabledState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.guna2GradientButton1.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2GradientButton1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2GradientButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2GradientButton1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.guna2GradientButton1.HoverState.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Location = new System.Drawing.Point(673, 400);
+            this.guna2GradientButton1.Name = "guna2GradientButton1";
+            this.guna2GradientButton1.ShadowDecoration.Parent = this.guna2GradientButton1;
+            this.guna2GradientButton1.Size = new System.Drawing.Size(106, 48);
+            this.guna2GradientButton1.TabIndex = 15;
+            this.guna2GradientButton1.Text = "CS:GO Folder";
+            // 
+            // Documents
+            // 
+            this.Documents.AutoRoundedCorners = true;
+            this.Documents.BackColor = System.Drawing.Color.Transparent;
+            this.Documents.BorderRadius = 23;
+            this.Documents.CheckedState.Parent = this.Documents;
+            this.Documents.CustomImages.Parent = this.Documents;
+            this.Documents.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Documents.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Documents.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Documents.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Documents.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Documents.DisabledState.Parent = this.Documents;
+            this.Documents.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Documents.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Documents.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold);
+            this.Documents.ForeColor = System.Drawing.Color.White;
+            this.Documents.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Documents.HoverState.Parent = this.Documents;
+            this.Documents.Location = new System.Drawing.Point(164, 400);
+            this.Documents.Name = "Documents";
+            this.Documents.ShadowDecoration.Parent = this.Documents;
+            this.Documents.Size = new System.Drawing.Size(106, 48);
+            this.Documents.TabIndex = 14;
+            this.Documents.Text = "Documents";
+            this.Documents.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Documents_MouseDown);
+            // 
+            // ProgramFilesX86
+            // 
+            this.ProgramFilesX86.AutoRoundedCorners = true;
+            this.ProgramFilesX86.BackColor = System.Drawing.Color.Transparent;
+            this.ProgramFilesX86.BorderRadius = 23;
+            this.ProgramFilesX86.CheckedState.Parent = this.ProgramFilesX86;
+            this.ProgramFilesX86.CustomImages.Parent = this.ProgramFilesX86;
+            this.ProgramFilesX86.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.ProgramFilesX86.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.ProgramFilesX86.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ProgramFilesX86.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.ProgramFilesX86.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.ProgramFilesX86.DisabledState.Parent = this.ProgramFilesX86;
+            this.ProgramFilesX86.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.ProgramFilesX86.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.ProgramFilesX86.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgramFilesX86.ForeColor = System.Drawing.Color.White;
+            this.ProgramFilesX86.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.ProgramFilesX86.HoverState.Parent = this.ProgramFilesX86;
+            this.ProgramFilesX86.Location = new System.Drawing.Point(539, 399);
+            this.ProgramFilesX86.Name = "ProgramFilesX86";
+            this.ProgramFilesX86.ShadowDecoration.Parent = this.ProgramFilesX86;
+            this.ProgramFilesX86.Size = new System.Drawing.Size(106, 48);
+            this.ProgramFilesX86.TabIndex = 13;
+            this.ProgramFilesX86.Text = "Program Files (x86)";
+            this.ProgramFilesX86.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ProgramFilesX86_MouseDown);
+            // 
+            // C_Disk
+            // 
+            this.C_Disk.AutoRoundedCorners = true;
+            this.C_Disk.BackColor = System.Drawing.Color.Transparent;
+            this.C_Disk.BorderRadius = 23;
+            this.C_Disk.CheckedState.Parent = this.C_Disk;
+            this.C_Disk.CustomImages.Parent = this.C_Disk;
+            this.C_Disk.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.C_Disk.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.C_Disk.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.C_Disk.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.C_Disk.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.C_Disk.DisabledState.Parent = this.C_Disk;
+            this.C_Disk.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.C_Disk.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.C_Disk.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.C_Disk.ForeColor = System.Drawing.Color.White;
+            this.C_Disk.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.C_Disk.HoverState.Parent = this.C_Disk;
+            this.C_Disk.Location = new System.Drawing.Point(29, 399);
+            this.C_Disk.Name = "C_Disk";
+            this.C_Disk.ShadowDecoration.Parent = this.C_Disk;
+            this.C_Disk.Size = new System.Drawing.Size(106, 48);
+            this.C_Disk.TabIndex = 12;
+            this.C_Disk.Text = "C Disk";
+            this.C_Disk.MouseDown += new System.Windows.Forms.MouseEventHandler(this.C_Disk_MouseDown);
+            // 
             // Detector_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -376,6 +607,14 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Label RainbowText2;
         private System.Windows.Forms.Label RainbowText;
         private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
+        private Guna.UI2.WinForms.Guna2GradientButton Prefetch;
+        private Guna.UI2.WinForms.Guna2GradientButton Appdata;
+        private Guna.UI2.WinForms.Guna2GradientButton CSGOFolder;
+        private Guna.UI2.WinForms.Guna2GradientButton Recent;
+        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
+        private Guna.UI2.WinForms.Guna2GradientButton Documents;
+        private Guna.UI2.WinForms.Guna2GradientButton ProgramFilesX86;
+        private Guna.UI2.WinForms.Guna2GradientButton C_Disk;
     }
 }
 

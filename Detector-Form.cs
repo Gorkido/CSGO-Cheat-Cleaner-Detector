@@ -26,6 +26,10 @@ namespace CSGO_Cheat_Cleaner_Detector
             Clock1.ForeColor = Color.FromArgb(r, g, b);
             RainbowText.ForeColor = Color.FromArgb(r, g, b);
             RainbowText2.ForeColor = Color.FromArgb(r, g, b);
+            Recent.ForeColor = Color.FromArgb(r, g, b);
+            CSGOFolder.ForeColor = Color.FromArgb(r, g, b);
+            Appdata.ForeColor = Color.FromArgb(r, g, b);
+            Prefetch.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
@@ -49,6 +53,28 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             Exit_Form OpenForm = new Exit_Form();
             OpenForm.Show();
+        }
+
+        private void PrefetchCleaner()
+        {
+            try
+            {
+                string Prefetch = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Windows\Prefetch\"; // Prefetch";
+                DirectoryInfo d = new DirectoryInfo(Prefetch);
+
+                FileInfo[] Files = d.GetFiles("*.pf"); //Getting pf files
+
+                foreach (FileInfo file in Files)
+                {
+                    string str = Prefetch + "" + file.Name;
+                    File.Copy(str, str.Remove(str.Length - 12), true);
+                    File.Delete(str);
+                }
+            }
+            catch (Exception ex)
+            {
+                CheatLog.Items.Add(ex.Message);
+            }
         }
 
         private void Find_MouseDown(object sender, MouseEventArgs e)
@@ -96,7 +122,22 @@ namespace CSGO_Cheat_Cleaner_Detector
             };
             // Cheats
 
+            // Cheats2
+            string[] Cheats2 = {
+            Prefetch + @"\OSIRIS.DLL",Prefetch + @"\NIXWARE.DLL",Prefetch + @"\AIMFALL.DLL",Prefetch + @"\GODWARE.DLL",Prefetch + @"\PPHUD V3",Prefetch + @"\Aurora-Project",Prefetch + @"\saphire",Prefetch + @"\ot", Prefetch + @"\otc",Prefetch + @"\YeahNot_CS",Prefetch + @"\BlazeHack",Prefetch + @"\LEGENDWARE.DLL",Prefetch + @"\weave",Prefetch + @"\AIMWARE.DLL",Prefetch + @"\FATALITY.DLL",Prefetch + @"\JustGlow",Prefetch + @"\rawetripp",Prefetch + @"\pdr",Prefetch + @"\LUCKERBY",Prefetch + @"\sensum",Prefetch + @"\Anubis",Prefetch + @"\Legithook",Prefetch + @"\sByteCSGONew",Prefetch + @"\R41N3W4R3"
+            };
+            // Cheats2
+
             CheatLog.Items.Clear();
+            if (Directory.Exists(Prefetch))
+            {
+                PrefetchCleaner();
+            }
+            else
+            {
+                CheatLog2.Items.Add(Prefetch + " " + "Cannot Be Found");
+            }
+
 
             foreach (string dir in Cheats)
             {
@@ -107,15 +148,36 @@ namespace CSGO_Cheat_Cleaner_Detector
                         Process.Start(dir);
                         CheatLog.Items.Add("Cheat Found: " + dir);
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
-                        CheatLog.Items.Add("Cheat Cannot Be Found: " + dir);
+                        CheatLog.Items.Add(ex.Message);
                         // ignore errors
                     }
                 }
                 else
                 {
-                    CheatLog2.Items.Add("Cheat Cannot Be Found: " + dir);
+                    CheatLog2.Items.Add("Directory" + dir + " " + "Cannot Be Found");
+                }
+            }
+
+            foreach (string file in Cheats2)
+            {
+                if (File.Exists(file))
+                {
+                    try
+                    {
+                        Process.Start(Prefetch);
+                        CheatLog.Items.Add("Cheat Found: " + file);
+                    }
+                    catch (Exception ex)
+                    {
+                        CheatLog.Items.Add(ex.Message);
+                        // ignore errors
+                    }
+                }
+                else
+                {
+                    CheatLog2.Items.Add("Directory" + file + " " + "Cannot Be Found");
                 }
             }
         }
@@ -140,6 +202,10 @@ namespace CSGO_Cheat_Cleaner_Detector
                 FormNameLabel.ForeColor = Color.White;
                 Minimize.ForeColor = Color.White;
                 Exit.ForeColor = Color.White;
+                Recent.ForeColor = Color.White;
+                CSGOFolder.ForeColor = Color.White;
+                Prefetch.ForeColor = Color.White;
+                Appdata.ForeColor = Color.White;
                 Clock1.ForeColor = Color.White;
             }
             else
@@ -159,6 +225,111 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             RainbowText.Hide();
             RainbowText2.Hide();
+        }
+
+        private void Appdata_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string Appdata = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile) + @"\Appdata"; // Appdata\local
+            // Folder Location
+            if (Directory.Exists(Appdata))
+            {
+                Process.Start(Appdata);
+            }
+            else
+            {
+                MessageBox.Show("Appdata Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
+        }
+
+        private void Recent_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string Recent = Environment.GetFolderPath(Environment.SpecialFolder.Recent); // Recent
+            // Folder Location
+            if (Directory.Exists(Recent))
+            {
+                Process.Start(Recent);
+            }
+            else
+            {
+                MessageBox.Show("Recent Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
+        }
+
+        private void Prefetch_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string Prefetch = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Windows\Prefetch"; // Prefetch
+            // Folder Location
+            if (Directory.Exists(Prefetch))
+            {
+                Process.Start(Prefetch);
+            }
+            else
+            {
+                MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
+        }
+
+        private void CSGOFolder_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string CSGO = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive"; // CSGO's Folder
+            // Folder Location
+            if (Directory.Exists(CSGO))
+            {
+                Process.Start(CSGO);
+            }
+            else
+            {
+                MessageBox.Show("CSGO Installation Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
+        }
+
+        private void C_Disk_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string Disk = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer); // Main Disk
+            // Folder Location
+            if (Directory.Exists(Disk))
+            {
+                Process.Start(Disk);
+            }
+            else
+            {
+                MessageBox.Show("C Disk Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
+        }
+
+        private void Documents_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string Documents = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments); // Documents
+            // Folder Location
+            if (Directory.Exists(Documents))
+            {
+                Process.Start(Documents);
+            }
+            else
+            {
+                MessageBox.Show("Documents Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
+        }
+
+        private void ProgramFilesX86_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Folder Location
+            string ProgramFilesX86 = Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86);
+            // Folder Location
+            if (Directory.Exists(ProgramFilesX86))
+            {
+                Process.Start(ProgramFilesX86);
+            }
+            else
+            {
+                MessageBox.Show("Program Files (X86) Folder Cannot Be Found", "CSGO Cheat Detector");
+            }
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
