@@ -298,7 +298,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void C_Disk_MouseDown(object sender, MouseEventArgs e)
         {
             // Folder Location
-            string Disk = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer); // Main Disk
+            string Disk = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\"; // Main Disk
             // Folder Location
             if (Directory.Exists(Disk))
             {
