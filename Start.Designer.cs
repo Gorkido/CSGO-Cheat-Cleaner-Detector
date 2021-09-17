@@ -333,12 +333,12 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.exitToolStripMenuItem});
             this.ContextMenuStrip.Name = "ContextMenuStrip";
             this.ContextMenuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.ContextMenuStrip.Size = new System.Drawing.Size(121, 48);
+            this.ContextMenuStrip.Size = new System.Drawing.Size(119, 48);
             // 
             // restartToolStripMenuItem
             // 
             this.restartToolStripMenuItem.Name = "restartToolStripMenuItem";
-            this.restartToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.restartToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.restartToolStripMenuItem.Text = "Restart";
             this.restartToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.restartToolStripMenuItem_MouseDown);
             // 
@@ -347,7 +347,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.exitToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.exitToolStripMenuItem.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.exitToolStripMenuItem_MouseDown);
             // 

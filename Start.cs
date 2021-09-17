@@ -52,7 +52,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void CSGO_Cheat_Cleaner_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
             Cleaner_Form OpenForm = new Cleaner_Form();
             OpenForm.Show();
         }
@@ -60,7 +60,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void CSGO_Cheat_Detector_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
             Detector_Form OpenForm = new Detector_Form();
             OpenForm.Show();
         }
@@ -105,7 +105,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Application_Downloader_MouseDown(object sender, MouseEventArgs e)
         {
             Rainbow_Text.Enabled = false;
-            Hide();
+            Close();
             Application_Downloader_Form OpenForm = new Application_Downloader_Form();
             OpenForm.Show();
         }

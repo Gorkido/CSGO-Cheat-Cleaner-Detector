@@ -25,6 +25,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             Clock1.ForeColor = Color.FromArgb(r, g, b);
             Exit_App.ForeColor = Color.FromArgb(r, g, b);
             Cancel.ForeColor = Color.FromArgb(r, g, b);
+            RainbowText.ForeColor = Color.FromArgb(r, g, b);
+            RainbowText.ForeColor = Color.FromArgb(r, g, b);
             Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
@@ -47,7 +49,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Cancel_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
         }
 
         // Executing .Bat file
@@ -80,7 +82,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Exit_App_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             string dir2 = @"\Cleaner.bat";
             ExecuteCommand(sPath + dir2);
@@ -98,7 +100,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
         }
 
         private void RainbowDisableEnable_CheckedChanged(object sender, EventArgs e)

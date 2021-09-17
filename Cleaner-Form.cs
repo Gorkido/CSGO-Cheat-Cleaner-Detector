@@ -44,9 +44,9 @@ namespace CSGO_Cheat_Cleaner_Detector
                     CleanLog.Items.Add("'" + FolderName + "'" + " " + "is not found.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                CleanLog2.Items.Add(ex.Message);
             }
         }
 
@@ -67,9 +67,9 @@ namespace CSGO_Cheat_Cleaner_Detector
                     CleanLog.Items.Add(FolderName + " " + "is not found.");
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                CleanLog2.Items.Add(ex.Message);
             }
         }
 
@@ -85,19 +85,15 @@ namespace CSGO_Cheat_Cleaner_Detector
                 RedirectStandardError = true,
                 RedirectStandardOutput = true
             };
-
             Process process = Process.Start(processInfo);
 
             process.OutputDataReceived += (object sender, DataReceivedEventArgs e) =>
-                Console.WriteLine("output>>" + e.Data);
+            Console.WriteLine("output>>" + e.Data);
             process.BeginOutputReadLine();
-
             process.ErrorDataReceived += (object sender, DataReceivedEventArgs e) =>
-                Console.WriteLine("error>>" + e.Data);
+            Console.WriteLine("error>>" + e.Data);
             process.BeginErrorReadLine();
-
             process.WaitForExit();
-
             Console.WriteLine("ExitCode: {0}", process.ExitCode);
             process.Close();
         }
@@ -152,8 +148,28 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
-            Exit_Form OpenForm = new Exit_Form();
-            OpenForm.Show();
+            FormCollection AllForms = Application.OpenForms;
+            Boolean FormOpen = false;
+            Form OpenedForm = new Form();
+            foreach (Form form in AllForms)
+            {
+                if (form.Name == "Exit_Form")
+                {
+                    OpenedForm = form;
+                    FormOpen = true;
+                }
+            }
+            if (FormOpen == true)
+            {
+                OpenedForm.Close();
+                Exit_Form OpenForm = new Exit_Form();
+                OpenForm.Show();
+            }
+            else
+            {
+                Exit_Form OpenForm = new Exit_Form();
+                OpenForm.Show();
+            }
         }
 
         private void Clean_MouseDown(object sender, MouseEventArgs e)
@@ -201,11 +217,17 @@ namespace CSGO_Cheat_Cleaner_Detector
             };
             // Cheats
 
+            // Cheats2
+            string[] Cheats2 = {
+            Prefetch + @"\OSIRIS.DLL",Prefetch + @"\NIXWARE.DLL",Prefetch + @"\AIMFALL.DLL",Prefetch + @"\GODWARE.DLL",Prefetch + @"\PPHUD V3",Prefetch + @"\Aurora-Project",Prefetch + @"\saphire",Prefetch + @"\ot", Prefetch + @"\otc",Prefetch + @"\YeahNot_CS",Prefetch + @"\BlazeHack",Prefetch + @"\LEGENDWARE.DLL",Prefetch + @"\weave",Prefetch + @"\AIMWARE.DLL",Prefetch + @"\FATALITY.DLL",Prefetch + @"\JustGlow",Prefetch + @"\rawetripp",Prefetch + @"\pdr",Prefetch + @"\LUCKERBY",Prefetch + @"\sensum",Prefetch + @"\Anubis",Prefetch + @"\Legithook",Prefetch + @"\sByteCSGONew",Prefetch + @"\R41N3W4R3"
+            };
+            // Cheats2
+
             // Temporary Folders
             string[] Temporary = {
                 Temp,
                 //Temp2,
-                Recent + "\\", //lol
+                Recent + @"\",
                 Prefetch
             };
             // Temporary Folders

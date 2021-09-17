@@ -45,7 +45,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Cancel_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
             Login_Form OpenForm = new Login_Form();
             OpenForm.Show();
         }
@@ -53,7 +53,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Continue_App_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
             Start OpenForm = new Start();
             OpenForm.Show();
         }
@@ -66,7 +66,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
             Login_Form OpenForm = new Login_Form();
             OpenForm.Show();
         }
@@ -103,11 +103,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             RainbowText.Hide();
             RainbowText2.Hide();
-        }
-
-        private void Minimize_MouseDown(object sender, MouseEventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
         }
 
         private void Form_Load(object sender, EventArgs e)

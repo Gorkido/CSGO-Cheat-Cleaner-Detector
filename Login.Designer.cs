@@ -330,7 +330,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Name = "Login_Form";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.Form_Load);
             this.Drag_Panel.ResumeLayout(false);

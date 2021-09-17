@@ -225,7 +225,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Are_You_Sure.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Are_You_Sure.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Are_You_Sure.ForeColor = System.Drawing.Color.White;
-            this.Are_You_Sure.Location = new System.Drawing.Point(121, 72);
+            this.Are_You_Sure.Location = new System.Drawing.Point(123, 71);
             this.Are_You_Sure.Name = "Are_You_Sure";
             this.Are_You_Sure.Size = new System.Drawing.Size(104, 24);
             this.Are_You_Sure.TabIndex = 6;

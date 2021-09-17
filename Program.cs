@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Net.NetworkInformation;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -11,9 +13,18 @@ namespace CSGO_Cheat_Cleaner_Detector
         [STAThread]
         private static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Form());
+            bool connection = NetworkInterface.GetIsNetworkAvailable();
+            if (connection == true)
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new Login_Form());
+
+            }
+            else
+            {
+                MessageBox.Show("No Network Connection", "Error");
+            }
         }
     }
 }

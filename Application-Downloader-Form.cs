@@ -58,7 +58,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                 process.Kill();
             }
             Clock1Timer.Enabled = false;
-            Hide();
+            Close();
             string sPath = Path.GetTempPath(); //getting temp's path
             string dir2 = @"\Gorkido_App_Downloader\Gorkido_Downloads";
             if (Directory.Exists(sPath + dir2))

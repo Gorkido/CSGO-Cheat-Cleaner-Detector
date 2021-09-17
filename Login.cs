@@ -93,6 +93,11 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
+            if (Password.Text == "")
+            {
+                Password.Text = "This field cannot be empty";
+            }
+
             string URL = "https://textuploader.com/taqdi/raw";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
