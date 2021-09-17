@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net.NetworkInformation;
-using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector

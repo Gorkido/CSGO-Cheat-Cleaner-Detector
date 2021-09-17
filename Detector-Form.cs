@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -57,7 +56,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
             FormCollection AllForms = Application.OpenForms;
-            Boolean FormOpen = false;
+            bool FormOpen = false;
             Form OpenedForm = new Form();
             foreach (Form form in AllForms)
             {
