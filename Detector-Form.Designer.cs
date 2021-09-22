@@ -62,6 +62,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLog2Drag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLog2Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.SysMainStatus = new System.Windows.Forms.Label();
+            this.SuperfetchService = new System.Windows.Forms.Label();
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +78,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.SuperfetchService);
+            this.Background_Panel.Controls.Add(this.SysMainStatus);
             this.Background_Panel.Controls.Add(this.ProgramFiles);
             this.Background_Panel.Controls.Add(this.Documents);
             this.Background_Panel.Controls.Add(this.ProgramFilesX86);
@@ -563,6 +567,22 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.CheatLog2Elipse.BorderRadius = 40;
             this.CheatLog2Elipse.TargetControl = this.CheatLog2;
             // 
+            // SysMainStatus
+            // 
+            this.SysMainStatus.AutoSize = true;
+            this.SysMainStatus.Location = new System.Drawing.Point(814, 126);
+            this.SysMainStatus.Name = "SysMainStatus";
+            this.SysMainStatus.Size = new System.Drawing.Size(0, 13);
+            this.SysMainStatus.TabIndex = 16;
+            // 
+            // SuperfetchService
+            // 
+            this.SuperfetchService.AutoSize = true;
+            this.SuperfetchService.Location = new System.Drawing.Point(818, 216);
+            this.SuperfetchService.Name = "SuperfetchService";
+            this.SuperfetchService.Size = new System.Drawing.Size(0, 13);
+            this.SuperfetchService.TabIndex = 17;
+            // 
             // Detector_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -577,6 +597,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form_Load);
             this.Background_Panel.ResumeLayout(false);
+            this.Background_Panel.PerformLayout();
             this.Drag_Panel.ResumeLayout(false);
             this.Drag_Panel.PerformLayout();
             this.ResumeLayout(false);
@@ -616,6 +637,8 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2GradientButton Documents;
         private Guna.UI2.WinForms.Guna2GradientButton ProgramFilesX86;
         private Guna.UI2.WinForms.Guna2GradientButton C_Disk;
+        private System.Windows.Forms.Label SysMainStatus;
+        private System.Windows.Forms.Label SuperfetchService;
     }
 }
 

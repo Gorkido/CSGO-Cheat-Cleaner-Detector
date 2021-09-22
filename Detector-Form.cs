@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.ServiceProcess;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -296,7 +297,38 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
             else
             {
-                MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
+                ServiceController[] services = ServiceController.GetServices();
+                foreach (ServiceController service in services)
+                {
+                    if (Environment.OSVersion.Version.Major == 5)
+                    {
+                        string Superfetch = service.ServiceName = "Superfetch";
+                        Superfetch = Superfetch + " = " + service.Status;
+                        SysMainStatus.Text = Superfetch;
+                        if (SuperfetchService.Text == "Superfetch = Stopped")
+                        {
+                            MessageBox.Show("SuperFetch Service is disabled", "CSGO Cheat Detector");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
+                        }
+                    }
+                    else
+                    {
+                        string SysMain = service.ServiceName = "SysMain";
+                        SysMain = SysMain + " = " + service.Status;
+                        SysMainStatus.Text = SysMain;
+                        if (SysMainStatus.Text == "SysMain = Stopped")
+                        {
+                            MessageBox.Show("SysMain Service is disabled", "CSGO Cheat Detector");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
+                        }
+                    }
+                }
             }
         }
 

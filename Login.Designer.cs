@@ -50,7 +50,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.TextBoxElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.FormDrag4 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drag_Panel.SuspendLayout();
             this.Background_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -310,14 +309,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.TextBoxElipse.BorderRadius = 40;
             this.TextBoxElipse.TargetControl = this.Password;
             // 
-            // FormDrag4
-            // 
-            this.FormDrag4.DragEndTransparencyValue = 0.9D;
-            this.FormDrag4.DragStartTransparencyValue = 0.5D;
-            this.FormDrag4.TargetControl = this.Password;
-            this.FormDrag4.TransparentWhileDrag = true;
-            this.FormDrag4.UseTransparentDrag = true;
-            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -358,7 +349,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2BorderlessForm FormSettings;
         private Guna.UI2.WinForms.Guna2Elipse TextBoxElipse;
         private Guna.UI2.WinForms.Guna2TextBox Password;
-        private Guna.UI2.WinForms.Guna2DragControl FormDrag4;
         private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
         private System.Windows.Forms.Label RainbowText;
         private System.Windows.Forms.Label RainbowText2;

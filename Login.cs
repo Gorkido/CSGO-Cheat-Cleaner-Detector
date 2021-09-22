@@ -91,13 +91,31 @@ namespace CSGO_Cheat_Cleaner_Detector
             RainbowText2.Hide();
         }
 
+        public void wait(int milliseconds)
+        {
+            var timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0) return;
+
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
+        }
+
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
-            if (Password.Text == "")
-            {
-                Password.Text = "This field cannot be empty";
-            }
-
             string URL = "https://textuploader.com/taqdi/raw";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
@@ -127,9 +145,20 @@ namespace CSGO_Cheat_Cleaner_Detector
                 }
                 else
                 {
-                    Error_Form OpenForm = new Error_Form();
-                    OpenForm.Show();
-                    Hide();
+                    if (Password.Text == "")
+                    {
+                        Password.UseSystemPasswordChar = false;
+                        Password.Text = "This field cannot be empty";
+                        wait(3000);
+                        Password.UseSystemPasswordChar = true;
+                        Password.Text = "";
+                    }
+                    else
+                    {
+                        Error_Form OpenForm = new Error_Form();
+                        OpenForm.Show();
+                        Hide();
+                    }
                 }
             }
         }
