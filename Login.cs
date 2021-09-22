@@ -93,8 +93,11 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         public void wait(int milliseconds)
         {
-            var timer1 = new System.Windows.Forms.Timer();
-            if (milliseconds == 0 || milliseconds < 0) return;
+            Timer timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0)
+            {
+                return;
+            }
 
             // Console.WriteLine("start wait timer");
             timer1.Interval = milliseconds;
