@@ -58,7 +58,13 @@ namespace CSGO_Cheat_Cleaner_Detector
             if (Rainbow == true)
             {
                 Rainbow = false;
+                Rainbow_Text.Enabled = true;
+            }
+            else
+            {
+                Rainbow = true;
                 Rainbow_Text.Enabled = false;
+
                 Wrong_Pass_Label.ForeColor = Color.White;
                 Try_Again.ForeColor = Color.White;
                 RainbowText.ForeColor = Color.White;
@@ -66,11 +72,6 @@ namespace CSGO_Cheat_Cleaner_Detector
                 FormNameLabel.ForeColor = Color.Red;
                 Exit.ForeColor = Color.White;
                 Clock1.ForeColor = Color.White;
-            }
-            else
-            {
-                Rainbow = true;
-                Rainbow_Text.Enabled = true;
             }
         }
 
@@ -103,7 +104,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             Rainbow = true;
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
-            Clock1Timer.Enabled = true;
         }
     }
 }

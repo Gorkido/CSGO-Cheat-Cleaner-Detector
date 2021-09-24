@@ -96,7 +96,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Rainbow_Text
             // 
-            this.Rainbow_Text.Enabled = true;
             this.Rainbow_Text.Interval = 2;
             this.Rainbow_Text.Tick += new System.EventHandler(this.Rainbow_Text_Tick);
             // 

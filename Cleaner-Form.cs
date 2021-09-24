@@ -287,6 +287,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             if (Rainbow == true)
             {
                 Rainbow = false;
+                Rainbow_Text.Enabled = true;
+            }
+            else
+            {
+                Rainbow = true;
                 Rainbow_Text.Enabled = false;
 
                 Clean.ForeColor = Color.White;
@@ -298,11 +303,6 @@ namespace CSGO_Cheat_Cleaner_Detector
                 Minimize.ForeColor = Color.White;
                 Exit.ForeColor = Color.White;
                 Clock1.ForeColor = Color.White;
-            }
-            else
-            {
-                Rainbow = true;
-                Rainbow_Text.Enabled = true;
             }
         }
 
