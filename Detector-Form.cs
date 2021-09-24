@@ -343,7 +343,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Prefetch_MouseDown(object sender, MouseEventArgs e)
         {
             // Folder Location
-            string Prefetch = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Windows\Prefetchf"; // Prefetch
+            string Prefetch = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Windows\Prefetch"; // Prefetch
             // Folder Location
             OperatingSystem os = Environment.OSVersion;
             if (Directory.Exists(Prefetch))
