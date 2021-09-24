@@ -21,6 +21,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private bool Rainbow;
         private readonly WebClient webClient = new WebClient();
         private readonly Timer FadeIn = new Timer();
+        private readonly Timer FadeOut = new Timer();
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
@@ -50,6 +51,21 @@ namespace CSGO_Cheat_Cleaner_Detector
             // Form Design
         }
 
+        private void fadeOut(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut.Stop();    //if it is, we stop the time
+                Start OpenForm = new Start();
+                OpenForm.Show();
+                Close();
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
             IEnumerable<Process> EverythingProcessx64 = Process.GetProcesses().
@@ -66,15 +82,15 @@ namespace CSGO_Cheat_Cleaner_Detector
                 process.Kill();
             }
             Clock1Timer.Enabled = false;
-            Close();
+            FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+            FadeOut.Interval = 2;
+            FadeOut.Start();
             string sPath = Path.GetTempPath(); //getting temp's path
             string dir2 = @"\Gorkido_App_Downloader\Gorkido_Downloads";
             if (Directory.Exists(sPath + dir2))
             {
                 Directory.Delete(sPath + dir2, true);// Deleting %temp%\Gorkido_Stuff\Gorkido_Downloads
             }
-            Start OpenForm = new Start();
-            OpenForm.Show();
         }
 
         private void Clock1Timer_Tick(object sender, EventArgs e)

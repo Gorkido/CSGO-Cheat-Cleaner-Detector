@@ -14,7 +14,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private int r = 0, g = 210, b = 0;
         private bool Rainbow;
         private readonly Timer FadeIn = new Timer();
-
+        private readonly Timer FadeOut = new Timer();
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
             FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
@@ -47,12 +47,27 @@ namespace CSGO_Cheat_Cleaner_Detector
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
         }
 
+        private void fadeOut(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut.Stop();    //if it is, we stop the time
+                Close();
+                Login_Form OpenForm = new Login_Form();
+                OpenForm.Show();
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Close();
-            Login_Form OpenForm = new Login_Form();
-            OpenForm.Show();
+            FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+            FadeOut.Interval = 2;
+            FadeOut.Start();
         }
 
         private void RainbowDisableEnable_CheckedChanged(object sender, EventArgs e)
@@ -92,9 +107,9 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Try_Again_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Close();
-            Login_Form OpenForm = new Login_Form();
-            OpenForm.Show();
+            FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+            FadeOut.Interval = 2;
+            FadeOut.Start();
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)

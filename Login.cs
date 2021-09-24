@@ -17,6 +17,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private int r = 0, g = 210, b = 0;
         private bool Rainbow;
         private readonly Timer FadeIn = new Timer();
+        private readonly Timer FadeOut = new Timer();
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
@@ -46,10 +47,25 @@ namespace CSGO_Cheat_Cleaner_Detector
             // Form Design
         }
 
+        private void fadeOut(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut.Stop();    //if it is, we stop the timer
+                Application.Exit();   //and we try to close the form
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
+            FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+            FadeOut.Interval = 2;
+            FadeOut.Start();
             Clock1Timer.Enabled = false;
-            Application.Exit();
         }
 
         private void Clock1Timer_Tick(object sender, EventArgs e)
@@ -152,8 +168,8 @@ namespace CSGO_Cheat_Cleaner_Detector
                     if (Password.Text == "")
                     {
                         Password.UseSystemPasswordChar = false;
-                        Password.Text = "This field cannot be empty";
-                        wait(3000);
+                        Password.Text = "                    This field cannot be empty";
+                        wait(2000);
                         Password.UseSystemPasswordChar = true;
                         Password.Text = "";
                     }

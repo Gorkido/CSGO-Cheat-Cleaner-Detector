@@ -18,6 +18,8 @@ namespace CSGO_Cheat_Cleaner_Detector
         private int r = 0, g = 210, b = 0;
         private bool Rainbow;
         private readonly System.Windows.Forms.Timer FadeIn = new System.Windows.Forms.Timer();
+        private readonly System.Windows.Forms.Timer FadeOut = new System.Windows.Forms.Timer();
+
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
@@ -51,7 +53,9 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Cancel_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Close();
+            FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+            FadeOut.Interval = 2;
+            FadeOut.Start();
         }
 
         // Executing .Bat file
@@ -81,6 +85,20 @@ namespace CSGO_Cheat_Cleaner_Detector
             process.Close();
         }
         // Executing .Bat file
+
+        private void fadeOut(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut.Stop();    //if it is, we stop the time
+                Close();
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
         private void Exit_App_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
@@ -102,7 +120,9 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Close();
+            FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+            FadeOut.Interval = 2;
+            FadeOut.Start();
         }
 
         private void RainbowDisableEnable_CheckedChanged(object sender, EventArgs e)
