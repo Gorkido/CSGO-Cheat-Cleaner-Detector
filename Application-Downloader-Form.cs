@@ -20,6 +20,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private int r = 0, g = 210, b = 0;
         private bool Rainbow;
         private readonly WebClient webClient = new WebClient();
+        private readonly Timer FadeIn = new Timer();
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
@@ -171,10 +172,27 @@ namespace CSGO_Cheat_Cleaner_Detector
             WindowState = FormWindowState.Minimized;
         }
 
+        private void fadeIn(object sender, EventArgs e)
+        {
+            if (Opacity >= 0.9)
+            {
+                FadeIn.Stop();   //this stops the timer if the form is completely displayed
+            }
+            else
+            {
+                Opacity += 0.05;
+            }
+        }
+
         private void Form_Load(object sender, EventArgs e)
         {
             Rainbow = true;
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
+
+            Opacity = 0;      //first the opacity is 0
+            FadeIn.Interval = 2;  //we'll increase the opacity every 10ms
+            FadeIn.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            FadeIn.Start();
         }
     }
 }
