@@ -80,7 +80,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
         }
 
-        private void PrefetchCleaner()
+        private void PrefetchFinder()
         {
             try
             {
@@ -156,7 +156,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             CheatLog.Items.Clear();
             if (Directory.Exists(Prefetch))
             {
-                PrefetchCleaner();
+                PrefetchFinder();
             }
             else
             {
@@ -286,49 +286,81 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
         }
 
+        private void IfWin10()
+        {
+            OperatingSystem os = Environment.OSVersion;
+            try
+            {
+                ServiceController[] services = ServiceController.GetServices();
+                foreach (ServiceController service in services)
+                {
+                    string SysMain = service.ServiceName = "SysMain";
+                    SysMain = SysMain + " = " + service.Status;
+                    SysMainStatus.Text = SysMain;
+                }
+                if (SysMainStatus.Text == "SysMain = Stopped")
+                {
+                    MessageBox.Show("SysMain Service is disabled", "CSGO Cheat Detector");
+                }
+                else
+                {
+                    MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
+                }
+            }
+            catch (Exception ex)
+            {
+                CheatLog.Items.Add(ex.Message);
+            }
+        }
+
+        private void IfHigherThanWin8()
+        {
+            OperatingSystem os = Environment.OSVersion;
+            try
+            {
+                ServiceController[] services = ServiceController.GetServices();
+                foreach (ServiceController service in services)
+                {
+                    string Superfetch = service.DisplayName = "Superfetch";
+                    Superfetch = Superfetch + " = " + service.Status;
+                    SuperfetchService.Text = Superfetch;
+                }
+                if (SuperfetchService.Text == "Superfetch = Stopped")
+                {
+                    MessageBox.Show("Superfetch Service is disabled", "CSGO Cheat Detector");
+                }
+                else
+                {
+                    MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
+                }
+            }
+            catch (Exception ex)
+            {
+                CheatLog.Items.Add(ex.Message);
+            }
+        }
+
         private void Prefetch_MouseDown(object sender, MouseEventArgs e)
         {
             // Folder Location
-            string Prefetch = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Windows\Prefetch"; // Prefetch
+            string Prefetch = Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) + @"\Windows\Prefetchf"; // Prefetch
             // Folder Location
+            OperatingSystem os = Environment.OSVersion;
             if (Directory.Exists(Prefetch))
             {
                 Process.Start(Prefetch);
             }
             else
             {
-                ServiceController[] services = ServiceController.GetServices();
-                foreach (ServiceController service in services)
+                if (os.Version.Major >= 7)
                 {
-                    if (Environment.OSVersion.Version.Major == 5)
-                    {
-                        string Superfetch = service.ServiceName = "Superfetch";
-                        Superfetch = Superfetch + " = " + service.Status;
-                        SysMainStatus.Text = Superfetch;
-                        if (SuperfetchService.Text == "Superfetch = Stopped")
-                        {
-                            MessageBox.Show("SuperFetch Service is disabled", "CSGO Cheat Detector");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
-                        }
-                    }
-                    else
-                    {
-                        string SysMain = service.ServiceName = "SysMain";
-                        SysMain = SysMain + " = " + service.Status;
-                        SysMainStatus.Text = SysMain;
-                        if (SysMainStatus.Text == "SysMain = Stopped")
-                        {
-                            MessageBox.Show("SysMain Service is disabled", "CSGO Cheat Detector");
-                        }
-                        else
-                        {
-                            MessageBox.Show("Prefetch Folder Cannot Be Found", "CSGO Cheat Detector");
-                        }
-                    }
+                    IfWin10();
                 }
+                else
+                {
+                    IfHigherThanWin8();
+                }
+
             }
         }
 
