@@ -4,11 +4,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CSGO Cheat Cleaner/Detector")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("CS:GO Cheat Cleaner/Detector")]
+[assembly: AssemblyDescription("A CS:GO Cheat Cleaner/Detector")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CSGO Cheat Cleaner/Detector")]
+[assembly: AssemblyCompany("NotYetHAX")]
+[assembly: AssemblyProduct("CS:GO Cheat Cleaner/Detector")]
 [assembly: AssemblyCopyright("Copyright © 2021 Gorkido#8195")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
