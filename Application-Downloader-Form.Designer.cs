@@ -281,6 +281,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Clock1Timer
             // 
+            this.Clock1Timer.Enabled = true;
             this.Clock1Timer.Interval = 1000;
             this.Clock1Timer.Tick += new System.EventHandler(this.Clock1Timer_Tick);
             // 

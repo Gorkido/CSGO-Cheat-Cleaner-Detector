@@ -52,9 +52,16 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Exit_MouseDown(object sender, MouseEventArgs e)
         {
-            IEnumerable<Process> EverythingProcess = Process.GetProcesses().
+            IEnumerable<Process> EverythingProcessx64 = Process.GetProcesses().
             Where(pr => pr.ProcessName == "Everything-1.4.1.1009.x64-Setup");
-            foreach (Process process in EverythingProcess)
+            foreach (Process process in EverythingProcessx64)
+            {
+                process.Kill();
+            }
+
+            IEnumerable<Process> EverythingProcessx86 = Process.GetProcesses().
+            Where(pr => pr.ProcessName == "Everything-1.4.1.1009.x86-Setup");
+            foreach (Process process in EverythingProcessx86)
             {
                 process.Kill();
             }

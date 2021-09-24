@@ -341,7 +341,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             Rainbow = true;
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
-            Clock1Timer.Enabled = true;
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             Thread.Sleep(1000);
             Extract("CSGO_Cheat_Cleaner_Detector", sPath, "Resources", "Cleaner.bat"); // Extracting "Cleaner.bat"
