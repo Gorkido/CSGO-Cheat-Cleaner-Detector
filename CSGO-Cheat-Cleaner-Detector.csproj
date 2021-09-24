@@ -353,6 +353,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSGO.ico" />
+    <None Include="Resources\GIF.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

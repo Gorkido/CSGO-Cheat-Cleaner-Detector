@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Drawing;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -9,102 +8,52 @@ namespace CSGO_Cheat_Cleaner_Detector
         public Login_Information()
         {
             InitializeComponent();
+            Successful.Parent = GIF;
         }
 
         // Form Design
-        private int r = 0, g = 210, b = 0;
-        private bool Rainbow;
         private readonly Timer FadeIn = new Timer();
+        private readonly Timer FadeOut = new Timer();
 
-        private void Rainbow_Text_Tick(object sender, EventArgs e)
+        public void wait(int milliseconds)
         {
-            FormNameLabel.ForeColor = Color.FromArgb(r, g, b);
-            Exit.ForeColor = Color.FromArgb(r, g, b);
-            Are_You_Sure.ForeColor = Color.FromArgb(r, g, b);
-            Clock1.ForeColor = Color.FromArgb(r, g, b);
-            Continue_App.ForeColor = Color.FromArgb(r, g, b);
-            RainbowText.ForeColor = Color.FromArgb(r, g, b);
-            RainbowText2.ForeColor = Color.FromArgb(r, g, b);
-            Cancel.ForeColor = Color.FromArgb(r, g, b);
-            if (r > 0 && b == 0)
+            Timer timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0)
             {
-                r--;
-                g++;
+                return;
             }
-            if (g > 0 && r == 0)
+
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
             {
-                g--;
-                b++;
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
             }
-            if (b > 0 && g == 0)
+        }
+
+        private void fadeOut(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
             {
-                b--;
-                r++;
-            }
-            // Form Design
-        }
-
-        private void Cancel_MouseDown(object sender, MouseEventArgs e)
-        {
-            Clock1Timer.Enabled = false;
-            Close();
-            Login_Form OpenForm = new Login_Form();
-            OpenForm.Show();
-        }
-
-        private void Continue_App_MouseDown(object sender, MouseEventArgs e)
-        {
-            Clock1Timer.Enabled = false;
-            Close();
-            Start OpenForm = new Start();
-            OpenForm.Show();
-        }
-
-        private void Clock1Timer_Tick(object sender, EventArgs e)
-        {
-            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
-        }
-
-        private void Exit_MouseDown(object sender, MouseEventArgs e)
-        {
-            Clock1Timer.Enabled = false;
-            Close();
-            Login_Form OpenForm = new Login_Form();
-            OpenForm.Show();
-        }
-
-        private void RainbowDisableEnable_CheckedChanged(object sender, EventArgs e)
-        {
-            if (Rainbow == true)
-            {
-                Rainbow = false;
-                Rainbow_Text.Enabled = true;
+                FadeOut.Stop();    //if it is, we stop the time
+                Close();
+                Start OpenForm = new Start();
+                OpenForm.Show();
             }
             else
             {
-                Rainbow = true;
-                Rainbow_Text.Enabled = false;
-                Are_You_Sure.ForeColor = Color.White;
-                Continue_App.ForeColor = Color.White;
-                RainbowText.ForeColor = Color.White;
-                RainbowText2.ForeColor = Color.White;
-                Cancel.ForeColor = Color.White;
-                FormNameLabel.ForeColor = Color.White;
-                Exit.ForeColor = Color.White;
-                Clock1.ForeColor = Color.White;
+                Opacity -= 0.05;
             }
-        }
-
-        private void RainbowDisableEnable_MouseEnter(object sender, EventArgs e)
-        {
-            RainbowText.Show();
-            RainbowText2.Show();
-        }
-
-        private void RainbowDisableEnable_MouseLeave(object sender, EventArgs e)
-        {
-            RainbowText.Hide();
-            RainbowText2.Hide();
         }
 
         private void fadeIn(object sender, EventArgs e)
@@ -112,6 +61,10 @@ namespace CSGO_Cheat_Cleaner_Detector
             if (Opacity >= 0.9)
             {
                 FadeIn.Stop();   //this stops the timer if the form is completely displayed
+                wait(1500);
+                FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+                FadeOut.Interval = 2;
+                FadeOut.Start();
             }
             else
             {
@@ -121,9 +74,6 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Form_Load(object sender, EventArgs e)
         {
-            Rainbow = true;
-            Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
-
             Opacity = 0;      //first the opacity is 0
             FadeIn.Interval = 2;  //we'll increase the opacity every 10ms
             FadeIn.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
