@@ -465,7 +465,7 @@ namespace CSGO_Cheat_Cleaner_Detector
 
             Opacity = 0;      //first the opacity is 0
             FadeIn.Interval = 2;  //we'll increase the opacity every 10ms
-            FadeIn.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity 
+            FadeIn.Tick += new EventHandler(fadeIn);  //this calls the function that changes opacity
             FadeIn.Start();
         }
     }
