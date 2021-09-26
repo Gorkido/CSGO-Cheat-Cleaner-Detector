@@ -41,7 +41,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Cancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Drag_Panel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.FormNameLabel = new System.Windows.Forms.Label();
-            this.Minimize = new System.Windows.Forms.Label();
             this.Exit = new System.Windows.Forms.Label();
             this.FormDrag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.FormDrag2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -215,7 +214,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Drag_Panel.BackColor = System.Drawing.Color.Transparent;
             this.Drag_Panel.BorderRadius = 20;
             this.Drag_Panel.Controls.Add(this.FormNameLabel);
-            this.Drag_Panel.Controls.Add(this.Minimize);
             this.Drag_Panel.Controls.Add(this.Exit);
             this.Drag_Panel.Dock = System.Windows.Forms.DockStyle.Top;
             this.Drag_Panel.FillColor = System.Drawing.Color.MediumSlateBlue;
@@ -242,19 +240,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormNameLabel.Size = new System.Drawing.Size(140, 24);
             this.FormNameLabel.TabIndex = 2;
             this.FormNameLabel.Text = "Confirmation";
-            // 
-            // Minimize
-            // 
-            this.Minimize.AutoSize = true;
-            this.Minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Minimize.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Minimize.ForeColor = System.Drawing.Color.White;
-            this.Minimize.Location = new System.Drawing.Point(242, 14);
-            this.Minimize.Name = "Minimize";
-            this.Minimize.Size = new System.Drawing.Size(27, 19);
-            this.Minimize.TabIndex = 1;
-            this.Minimize.Text = "__";
-            this.Minimize.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Minimize_MouseDown);
             // 
             // Exit
             // 
@@ -342,7 +327,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2GradientButton Cancel;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel Drag_Panel;
         private System.Windows.Forms.Label FormNameLabel;
-        private System.Windows.Forms.Label Minimize;
         private System.Windows.Forms.Label Exit;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag2;

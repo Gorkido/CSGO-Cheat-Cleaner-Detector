@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Reflection;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -342,7 +341,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             Rainbow = true;
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            Thread.Sleep(1000);
             Extract("CSGO_Cheat_Cleaner_Detector", sPath, "Resources", "Cleaner.bat"); // Extracting "Cleaner.bat"
 
             Opacity = 0;      //first the opacity is 0

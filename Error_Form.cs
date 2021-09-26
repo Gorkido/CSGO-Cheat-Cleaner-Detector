@@ -112,11 +112,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             FadeOut.Start();
         }
 
-        private void Minimize_MouseDown(object sender, MouseEventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         private void fadeIn(object sender, EventArgs e)
         {
             if (Opacity >= 0.9)

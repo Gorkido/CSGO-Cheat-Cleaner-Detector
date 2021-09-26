@@ -4583,30 +4583,30 @@
     <value>15, 46</value>
   </metadata>
   <metadata name="FormDrag2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>106, 49</value>
+    <value>126, 50</value>
   </metadata>
   <metadata name="Rainbow_Text.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>121, 20</value>
   </metadata>
   <metadata name="FormDrag3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>201, 51</value>
+    <value>230, 54</value>
   </metadata>
   <metadata name="CheatLogElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>236, 23</value>
   </metadata>
   <metadata name="FormDrag4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>298, 52</value>
+    <value>343, 54</value>
   </metadata>
   <metadata name="Clock1Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>353, 22</value>
   </metadata>
   <metadata name="FormDrag5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>411, 52</value>
+    <value>456, 54</value>
   </metadata>
   <metadata name="CheatLog2Drag.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>504, 55</value>
+    <value>569, 54</value>
   </metadata>
   <metadata name="CheatLog2Elipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>453, 26</value>
+    <value>454, 19</value>
   </metadata>
 </root>

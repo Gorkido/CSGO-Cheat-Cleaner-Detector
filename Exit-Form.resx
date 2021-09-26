@@ -4583,18 +4583,18 @@
     <value>136, 7</value>
   </metadata>
   <metadata name="FormDrag2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>25, 41</value>
+    <value>497, 9</value>
   </metadata>
   <metadata name="Rainbow_Text.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>233, 9</value>
   </metadata>
   <metadata name="FormDrag3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>137, 44</value>
+    <value>610, 9</value>
   </metadata>
   <metadata name="Clock1Timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>249, 49</value>
+    <value>723, 9</value>
   </metadata>
   <metadata name="FormDrag5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>368, 49</value>
+    <value>842, 9</value>
   </metadata>
 </root>

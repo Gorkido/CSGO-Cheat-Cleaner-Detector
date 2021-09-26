@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -19,6 +18,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private bool Rainbow;
         private readonly System.Windows.Forms.Timer FadeIn = new System.Windows.Forms.Timer();
         private readonly System.Windows.Forms.Timer FadeOut = new System.Windows.Forms.Timer();
+        private readonly System.Windows.Forms.Timer FadeOut2 = new System.Windows.Forms.Timer();
 
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
@@ -31,7 +31,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             Cancel.ForeColor = Color.FromArgb(r, g, b);
             RainbowText.ForeColor = Color.FromArgb(r, g, b);
             RainbowText2.ForeColor = Color.FromArgb(r, g, b);
-            Minimize.ForeColor = Color.FromArgb(r, g, b);
             if (r > 0 && b == 0)
             {
                 r--;
@@ -91,7 +90,32 @@ namespace CSGO_Cheat_Cleaner_Detector
             if (Opacity <= 0)     //check if opacity is 0
             {
                 FadeOut.Stop();    //if it is, we stop the time
-                Close();
+                Hide();
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
+        private void fadeOut2(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut.Stop();    //if it is, we stop the time
+                Hide();
+                string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                string dir2 = @"\Cleaner.bat";
+                ExecuteCommand(sPath + dir2);
+                if (File.Exists(sPath + dir2))
+                {
+                    File.Delete(sPath + dir2);// Deleting Desktop\Cleaner
+                    Application.Exit();
+                }
+                else
+                {
+                    Application.Exit();
+                }
             }
             else
             {
@@ -102,14 +126,9 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Exit_App_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Close();
-            string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string dir2 = @"\Cleaner.bat";
-            ExecuteCommand(sPath + dir2);
-            Thread.Sleep(1000);
-            File.Delete(sPath + dir2);// Deleting Desktop\Cleaner
-            Thread.Sleep(1000);
-            Application.Exit();// Exit from the application.
+            FadeOut2.Tick += new EventHandler(fadeOut2);  //this calls the fade out function
+            FadeOut2.Interval = 2;
+            FadeOut2.Start();
         }
 
         private void Clock1Timer_Tick(object sender, EventArgs e)
@@ -143,7 +162,6 @@ namespace CSGO_Cheat_Cleaner_Detector
                 RainbowText2.ForeColor = Color.White;
                 Cancel.ForeColor = Color.White;
                 FormNameLabel.ForeColor = Color.White;
-                Minimize.ForeColor = Color.White;
                 Exit.ForeColor = Color.White;
                 Clock1.ForeColor = Color.White;
             }

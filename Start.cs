@@ -14,6 +14,9 @@ namespace CSGO_Cheat_Cleaner_Detector
         private int r = 0, g = 210, b = 0;
         private bool Rainbow;
         private readonly Timer FadeIn = new Timer();
+        private readonly Timer FadeOut = new Timer();
+        private readonly Timer FadeOut2 = new Timer();
+        private readonly Timer FadeOut3 = new Timer();
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
@@ -70,20 +73,65 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
         }
 
+        private void fadeOut(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut.Stop();    //if it is, we stop the timer
+                Close();
+                Cleaner_Form OpenForm = new Cleaner_Form();
+                OpenForm.Show();
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
+        private void fadeOut2(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut2.Stop();    //if it is, we stop the timer
+                Close();
+                Detector_Form OpenForm = new Detector_Form();
+                OpenForm.Show();
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
+        private void fadeOut3(object sender, EventArgs e)
+        {
+            if (Opacity <= 0)     //check if opacity is 0
+            {
+                FadeOut3.Stop();    //if it is, we stop the timer
+                Close();
+                Application_Downloader_Form OpenForm = new Application_Downloader_Form();
+                OpenForm.Show();
+            }
+            else
+            {
+                Opacity -= 0.05;
+            }
+        }
+
         private void CSGO_Cheat_Cleaner_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Close();
-            Cleaner_Form OpenForm = new Cleaner_Form();
-            OpenForm.Show();
+            FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
+            FadeOut.Interval = 2;
+            FadeOut.Start();
         }
 
         private void CSGO_Cheat_Detector_MouseDown(object sender, MouseEventArgs e)
         {
             Clock1Timer.Enabled = false;
-            Close();
-            Detector_Form OpenForm = new Detector_Form();
-            OpenForm.Show();
+            FadeOut2.Tick += new EventHandler(fadeOut2);  //this calls the fade out function
+            FadeOut2.Interval = 2;
+            FadeOut2.Start();
         }
 
         private void Clock1Timer_Tick(object sender, EventArgs e)
@@ -127,9 +175,9 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Application_Downloader_MouseDown(object sender, MouseEventArgs e)
         {
             Rainbow_Text.Enabled = false;
-            Close();
-            Application_Downloader_Form OpenForm = new Application_Downloader_Form();
-            OpenForm.Show();
+            FadeOut3.Tick += new EventHandler(fadeOut3);  //this calls the fade out function
+            FadeOut3.Interval = 2;
+            FadeOut3.Start();
         }
 
         private void exitToolStripMenuItem_MouseDown(object sender, MouseEventArgs e)
