@@ -288,7 +288,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
         }
 
-        private void IfWin10()
+        private void IfHigherThanWin10()
         {
             OperatingSystem os = Environment.OSVersion;
             try
@@ -315,7 +315,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
         }
 
-        private void IfHigherThanWin8()
+        private void IfLowerThanWin8()
         {
             OperatingSystem os = Environment.OSVersion;
             try
@@ -356,11 +356,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             {
                 if (os.Version.Major >= 7)
                 {
-                    IfWin10();
+                    IfHigherThanWin10();
                 }
                 else
                 {
-                    IfHigherThanWin8();
+                    IfLowerThanWin8();
                 }
 
             }
