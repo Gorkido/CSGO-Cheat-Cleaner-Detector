@@ -152,7 +152,7 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
-            string URL = "https://textuploader.com/taqdi/raw";
+            string URL = "http://hastebin.com/raw/ixevakayam";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             if (response.StatusCode == HttpStatusCode.OK)
@@ -170,24 +170,22 @@ namespace CSGO_Cheat_Cleaner_Detector
                 }
 
                 string data = readStream.ReadToEnd();
-                response.Close();
-                readStream.Close();
 
-                if (Password.Text == data)
+                if (Password.Text == "")
                 {
-                    FadeOut.Tick += new EventHandler(fadeOut2);  //this calls the fade out function
-                    FadeOut.Interval = 2;
-                    FadeOut.Start();
+                    Password.UseSystemPasswordChar = false;
+                    Password.Text = "                    This field cannot be empty";
+                    wait(2000);
+                    Password.UseSystemPasswordChar = true;
+                    Password.Text = "";
                 }
                 else
                 {
-                    if (Password.Text == "")
+                    if (Password.Text == data)
                     {
-                        Password.UseSystemPasswordChar = false;
-                        Password.Text = "                    This field cannot be empty";
-                        wait(2000);
-                        Password.UseSystemPasswordChar = true;
-                        Password.Text = "";
+                        FadeOut.Tick += new EventHandler(fadeOut2);  //this calls the fade out function
+                        FadeOut.Interval = 2;
+                        FadeOut.Start();
                     }
                     else
                     {
@@ -196,6 +194,8 @@ namespace CSGO_Cheat_Cleaner_Detector
                         Hide();
                     }
                 }
+                response.Close();
+                readStream.Close();
             }
         }
 
