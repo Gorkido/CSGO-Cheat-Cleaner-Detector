@@ -44,12 +44,14 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Exit = new System.Windows.Forms.Label();
             this.FormDrag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Background_Panel = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.ProgressBar = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.RainbowText = new System.Windows.Forms.Label();
             this.RainbowDisableEnable = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.RainbowText2 = new System.Windows.Forms.Label();
             this.Everything = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.FormDrag6 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.Drag_Panel.SuspendLayout();
             this.Background_Panel.SuspendLayout();
             this.SuspendLayout();
@@ -186,6 +188,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.ProgressBar);
             this.Background_Panel.Controls.Add(this.RainbowText);
             this.Background_Panel.Controls.Add(this.RainbowDisableEnable);
             this.Background_Panel.Controls.Add(this.RainbowText2);
@@ -200,6 +203,22 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.ShadowDecoration.Parent = this.Background_Panel;
             this.Background_Panel.Size = new System.Drawing.Size(400, 184);
             this.Background_Panel.TabIndex = 2;
+            // 
+            // ProgressBar
+            // 
+            this.ProgressBar.AutoRoundedCorners = true;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.BorderRadius = 23;
+            this.ProgressBar.FillColor = System.Drawing.Color.White;
+            this.ProgressBar.Location = new System.Drawing.Point(101, 88);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.ProgressColor = System.Drawing.Color.MediumSlateBlue;
+            this.ProgressBar.ProgressColor2 = System.Drawing.Color.MediumSlateBlue;
+            this.ProgressBar.ShadowDecoration.Parent = this.ProgressBar;
+            this.ProgressBar.Size = new System.Drawing.Size(197, 48);
+            this.ProgressBar.TabIndex = 24;
+            this.ProgressBar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.ProgressBar.Visible = false;
             // 
             // RainbowText
             // 
@@ -293,6 +312,14 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.FormSettings.DragStartTransparencyValue = 0.1D;
             this.FormSettings.HasFormShadow = false;
             // 
+            // FormDrag6
+            // 
+            this.FormDrag6.DragEndTransparencyValue = 0.9D;
+            this.FormDrag6.DragStartTransparencyValue = 0.5D;
+            this.FormDrag6.TargetControl = this.ProgressBar;
+            this.FormDrag6.TransparentWhileDrag = true;
+            this.FormDrag6.UseTransparentDrag = true;
+            // 
             // Application_Downloader_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -336,5 +363,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Label RainbowText;
         private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
         private System.Windows.Forms.Label RainbowText2;
+        private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar;
+        private Guna.UI2.WinForms.Guna2DragControl FormDrag6;
     }
 }

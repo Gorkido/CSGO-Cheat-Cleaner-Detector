@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
@@ -22,6 +23,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private readonly WebClient webClient = new WebClient();
         private readonly Timer FadeIn = new Timer();
         private readonly Timer FadeOut = new Timer();
+        private readonly Stopwatch sw = new Stopwatch();
 
         private void Rainbow_Text_Tick(object sender, EventArgs e)
         {
@@ -82,6 +84,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                 process.Kill();
             }
             Clock1Timer.Enabled = false;
+            System.Threading.Thread.Sleep(500);
             FadeOut.Tick += new EventHandler(fadeOut);  //this calls the fade out function
             FadeOut.Interval = 2;
             FadeOut.Start();
@@ -113,6 +116,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                 Everything.ForeColor = Color.White;
                 Click.ForeColor = Color.White;
                 RainbowText.ForeColor = Color.White;
+                RainbowText2.ForeColor = Color.White;
                 FormNameLabel.ForeColor = Color.White;
                 Minimize.ForeColor = Color.White;
                 Exit.ForeColor = Color.White;
@@ -130,6 +134,32 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             RainbowText.Hide();
             RainbowText2.Hide();
+        }
+
+        public void wait(int milliseconds)
+        {
+            Timer timer1 = new System.Windows.Forms.Timer();
+            if (milliseconds == 0 || milliseconds < 0)
+            {
+                return;
+            }
+
+            // Console.WriteLine("start wait timer");
+            timer1.Interval = milliseconds;
+            timer1.Enabled = true;
+            timer1.Start();
+
+            timer1.Tick += (s, e) =>
+            {
+                timer1.Enabled = false;
+                timer1.Stop();
+                // Console.WriteLine("stop wait timer");
+            };
+
+            while (timer1.Enabled)
+            {
+                Application.DoEvents();
+            }
         }
 
         private void Everything_MouseDown(object sender, MouseEventArgs e)
@@ -153,11 +183,11 @@ namespace CSGO_Cheat_Cleaner_Detector
                 else
                 {
                     {
-                        webClient.DownloadFile("https://cdn.discordapp.com/attachments/895329334624124959/895329540849668136/Everything-1.4.1.1009.x64-Setup.exe", (sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));
-                        if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                        {
-                            Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x64-Setup.exe".
-                        }
+                        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/895329334624124959/895329540849668136/Everything-1.4.1.1009.x64-Setup.exe"), (sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));
+                        wait(600);
+                        ProgressBar.Show();
+                        webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompleted64);
+                        webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged64);
                     }
                 }
             }
@@ -180,11 +210,11 @@ namespace CSGO_Cheat_Cleaner_Detector
                 else
                 {
                     {
-                        webClient.DownloadFile("https://cdn.discordapp.com/attachments/895329334624124959/895329562974642176/Everything-1.4.1.1009.x86-Setup.exe", (sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));
-                        if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
-                        {
-                            Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x86-Setup.exe".
-                        }
+                        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/895329334624124959/895329562974642176/Everything-1.4.1.1009.x86-Setup.exe"), (sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));
+                        wait(600);
+                        ProgressBar.Show();
+                        webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompleted86);
+                        webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(ProgressChanged86);
                     }
                 }
             }
@@ -193,6 +223,45 @@ namespace CSGO_Cheat_Cleaner_Detector
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void ProgressChanged64(object sender, DownloadProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
+        }
+
+        private void DownloadCompleted64(object sender, AsyncCompletedEventArgs e)
+        {
+            string dir = @"\Gorkido_App_Downloader\Gorkido_Downloads";
+            string sPath = Path.GetTempPath(); //getting temp's path
+            if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x64-Setup.exe".
+                ProgressBar.Hide();
+            }
+            else
+            {
+                ProgressBar.Hide();
+            }
+        }
+
+        private void ProgressChanged86(object sender, DownloadProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
+        }
+
+        private void DownloadCompleted86(object sender, AsyncCompletedEventArgs e)
+        {
+            string dir = @"\Gorkido_App_Downloader\Gorkido_Downloads";
+            string sPath = Path.GetTempPath(); //getting temp's path
+            if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
+            {
+                Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x86-Setup.exe".
+            }
+            else
+            {
+                ProgressBar.Hide();
+            }
         }
 
         private void fadeIn(object sender, EventArgs e)
