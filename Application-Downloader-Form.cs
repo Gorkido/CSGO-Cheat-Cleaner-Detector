@@ -153,7 +153,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                 else
                 {
                     {
-                        webClient.DownloadFile("https://www60.zippyshare.com/d/Pf1NBij2/20094/Everything-1.4.1.1009.x64-Setup.exe", (sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));
+                        webClient.DownloadFile("https://cdn.discordapp.com/attachments/895329334624124959/895329540849668136/Everything-1.4.1.1009.x64-Setup.exe", (sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));
                         if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                         {
                             Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x64-Setup.exe".
@@ -180,7 +180,7 @@ namespace CSGO_Cheat_Cleaner_Detector
                 else
                 {
                     {
-                        webClient.DownloadFile("https://www51.zippyshare.com/d/VX6x6pHq/43899/Everything-1.4.1.1009.x86-Setup.exe", (sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));
+                        webClient.DownloadFile("https://cdn.discordapp.com/attachments/895329334624124959/895329562974642176/Everything-1.4.1.1009.x86-Setup.exe", (sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));
                         if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                         {
                             Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x86-Setup.exe".
