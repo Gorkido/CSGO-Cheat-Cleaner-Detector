@@ -61,22 +61,6 @@ namespace CSGO_Cheat_Cleaner_Detector.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to color 2
-        ///del /s /f /q %temp%\*.*
-        ///rd /s /q %temp%
-        ///md %temp%
-        ///cls 
-        ///goto theEnd
-        ///cls
-        ///pause.
-        /// </summary>
-        internal static string Cleaner {
-            get {
-                return ResourceManager.GetString("Cleaner", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap GIF {

@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.IO;
-using System.Reflection;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -20,34 +18,27 @@ namespace CSGO_Cheat_Cleaner_Detector
         // Clearing folder's content (\)
         private void ClearFolder(string FolderName)
         {
-            try
+            DirectoryInfo dir = new DirectoryInfo(FolderName);
+
+            foreach (FileInfo fi in dir.GetFiles())
             {
-                if (Directory.Exists(FolderName))
+                try
                 {
-                    DirectoryInfo dir = new DirectoryInfo(FolderName);
-
-                    foreach (FileInfo fi in dir.GetFiles())
-                    {
-                        fi.IsReadOnly = false;
-                        fi.Delete();
-                        CleanLog.Items.Add("'" + fi.FullName + "'" + " " + "is found and deleted");
-                    }
-
-                    foreach (DirectoryInfo di in dir.GetDirectories())
-                    {
-                        ClearFolder(di.FullName);
-                        di.Delete();
-                        CleanLog.Items.Add("'" + di.FullName + "'" + " " + "is found and deleted");
-                    }
+                    fi.Delete();
+                    CleanLog.Items.Add("File deleted: " + fi.FullName);
                 }
-                else
-                {
-                    CleanLog.Items.Add("'" + FolderName + "'" + " " + "is not found.");
-                }
+                catch (Exception) { } // Ignore all exceptions
             }
-            catch (Exception ex)
+
+            foreach (DirectoryInfo di in dir.GetDirectories())
             {
-                CleanLog2.Items.Add(ex.Message);
+                ClearFolder(di.FullName);
+                try
+                {
+                    di.Delete();
+                    CleanLog.Items.Add("Folder deleted: " + di.FullName);
+                }
+                catch (Exception) { } // Ignore all exceptions
             }
         }
 
@@ -75,45 +66,6 @@ namespace CSGO_Cheat_Cleaner_Detector
         }
 
         // Deleting folder (FolderName)
-
-        // Executing .Bat file
-        private static void ExecuteCommand(string command)
-        {
-            ProcessStartInfo processInfo = new ProcessStartInfo("cmd.exe", "/c " + command)
-            {
-                CreateNoWindow = true,
-                UseShellExecute = false,
-                RedirectStandardError = true,
-                RedirectStandardOutput = true
-            };
-            Process process = Process.Start(processInfo);
-
-            process.OutputDataReceived += (object sender, DataReceivedEventArgs e) =>
-            Console.WriteLine("output>>" + e.Data);
-            process.BeginOutputReadLine();
-            process.ErrorDataReceived += (object sender, DataReceivedEventArgs e) =>
-            Console.WriteLine("error>>" + e.Data);
-            process.BeginErrorReadLine();
-            process.WaitForExit();
-            Console.WriteLine("ExitCode: {0}", process.ExitCode);
-            process.Close();
-        }
-        // Executing .Bat file
-
-        // For Extracting Files..
-        private static void Extract(string nameSpace, string outDirectory, string internalFilePath, string resourceName)
-        {
-            Assembly assembly = Assembly.GetExecutingAssembly();
-
-            using (Stream s = assembly.GetManifestResourceStream(nameSpace + "." + (internalFilePath == "" ? "" : internalFilePath + ".") + resourceName))
-            using (BinaryReader r = new BinaryReader(s))
-            using (FileStream fs = new FileStream(outDirectory + "\\" + resourceName, FileMode.OpenOrCreate))
-            using (BinaryWriter w = new BinaryWriter(fs))
-            {
-                w.Write(r.ReadBytes((int)s.Length));
-            }
-        }
-        // For Extracting Files..
 
         // Form Design
         private int r = 0, g = 210, b = 0;
@@ -227,7 +179,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             // Temporary Folders
             string[] Temporary = {
                 Temp,
-                //Temp2,
+                Temp2,
                 Recent + @"\",
                 Prefetch
             };
@@ -262,9 +214,6 @@ namespace CSGO_Cheat_Cleaner_Detector
                 {
                     try
                     {
-                        string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                        string dir2 = @"\Cleaner.bat";
-                        ExecuteCommand(sPath + dir2);
                         CleanLog.Items.Add("Folder cleared: " + Temp2);
                         ClearFolder(dir);
                         CleanLog.Items.Add("Folder cleared: " + dir);
@@ -341,7 +290,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             Rainbow = true;
             Clock1.Text = DateTime.Now.ToString("HH:mm:ss tt");
             string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            Extract("CSGO_Cheat_Cleaner_Detector", sPath, "Resources", "Cleaner.bat"); // Extracting "Cleaner.bat"
 
             Opacity = 0;      //first the opacity is 0
             FadeIn.Interval = 2;  //we'll increase the opacity every 10ms
