@@ -1,7 +1,24 @@
-# Information #
-This application cleans/detects CS:GO cheats. If you want to clean CS:GO cheats, then choose "CS:GO Cheat Cleaner". And if you want to detect CS:GO cheats on your system, click "CS:GO Cheat Detector".
+<div align="center">
 
-# How to build? #
+<img src="https://user-images.githubusercontent.com/81165187/140623959-909e4930-2109-463f-907d-a240ea80a003.png" width="200" />
+
+# CSGO Cheat Cleaner / Detector
+**An application which cleans / detects CSGO cheats**
+</div>
+
+<p align="center">
+<img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625388-b74130f8-ccbf-42f1-aae8-f340a7aec5de.png"/>
+<img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
+</p>
+
+## Preview
+
+<p align="center">
+<img src="https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png">
+<img src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
+</p>
+
+## How to build?
 1-) First clone the repository.
 
 2-) Open NuGet Package Manager.
@@ -18,12 +35,7 @@ This application cleans/detects CS:GO cheats. If you want to clean CS:GO cheats,
 
 8-) Have Fun.
 
-# Preview #
-![image](https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png)
-
-![image](https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png)
-
-# Cheats #
+## Cheats
 
 Osiris
 
