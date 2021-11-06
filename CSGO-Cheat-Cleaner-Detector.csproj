@@ -61,7 +61,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>CSGO.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\CSGO.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -270,11 +270,11 @@
     <Compile Include="Forms\Detector-Form.Designer.cs">
       <DependentUpon>Detector-Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Error_Form.cs">
+    <Compile Include="Forms\Error-Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Error_Form.Designer.cs">
-      <DependentUpon>Error_Form.cs</DependentUpon>
+    <Compile Include="Forms\Error-Form.Designer.cs">
+      <DependentUpon>Error-Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Exit-Form.cs">
       <SubType>Form</SubType>
@@ -319,8 +319,8 @@
       <DependentUpon>Detector-Form.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Error_Form.resx">
-      <DependentUpon>Error_Form.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Error-Form.resx">
+      <DependentUpon>Error-Form.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Exit-Form.resx">
@@ -357,7 +357,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CSGO.ico" />
+    <Content Include="Resources\CSGO.ico" />
     <None Include="Resources\Opened Eye.png" />
     <None Include="Resources\Closed.png" />
     <None Include="Resources\GIF.gif" />
