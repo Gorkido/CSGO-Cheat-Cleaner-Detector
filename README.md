@@ -3,7 +3,7 @@
 <img src="https://user-images.githubusercontent.com/81165187/140623959-909e4930-2109-463f-907d-a240ea80a003.png" width="200" />
 
 # CSGO Cheat Cleaner / Detector
-An application which cleans / detects CSGO Cheats.
+# An application which cleans / detects CSGO Cheats. #
 </div>
 
 <p align="center">
