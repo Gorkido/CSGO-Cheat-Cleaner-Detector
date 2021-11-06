@@ -14,8 +14,8 @@ An application which cleans / detects CSGO Cheats.
 ## Preview
 
 <p align="center">
-<img width="900" height="500" alt="1" src="https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png">
-<img width="900" height="500" alt="2" src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
+<img src="https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png">
+<img src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
 </p>
 
 ## How to build?
