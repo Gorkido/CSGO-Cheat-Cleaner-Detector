@@ -45,17 +45,23 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowText = new System.Windows.Forms.Label();
             this.RainbowText2 = new System.Windows.Forms.Label();
             this.RainbowDisableEnable = new Guna.UI2.WinForms.Guna2ToggleSwitch();
-            this.Password = new Guna.UI2.WinForms.Guna2TextBox();
             this.Login = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.Password = new Guna.UI2.WinForms.Guna2TextBox();
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.TextBoxElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.OpenedEye = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.GitHub = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Website = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.Discord = new Guna.UI2.WinForms.Guna2PictureBox();
             this.ClosedEye = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.OpenedEye = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Drag_Panel.SuspendLayout();
             this.Background_Panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OpenedEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GitHub)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Website)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Discord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClosedEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OpenedEye)).BeginInit();
             this.SuspendLayout();
             // 
             // FormDrag5
@@ -169,6 +175,9 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             // Background_Panel
             // 
+            this.Background_Panel.Controls.Add(this.GitHub);
+            this.Background_Panel.Controls.Add(this.Website);
+            this.Background_Panel.Controls.Add(this.Discord);
             this.Background_Panel.Controls.Add(this.RainbowText);
             this.Background_Panel.Controls.Add(this.RainbowText2);
             this.Background_Panel.Controls.Add(this.RainbowDisableEnable);
@@ -237,6 +246,33 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.RainbowDisableEnable.MouseEnter += new System.EventHandler(this.RainbowDisableEnable_MouseEnter);
             this.RainbowDisableEnable.MouseLeave += new System.EventHandler(this.RainbowDisableEnable_MouseLeave);
             // 
+            // Login
+            // 
+            this.Login.AutoRoundedCorners = true;
+            this.Login.BackColor = System.Drawing.Color.Transparent;
+            this.Login.BorderRadius = 23;
+            this.Login.CheckedState.Parent = this.Login;
+            this.Login.CustomImages.Parent = this.Login;
+            this.Login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.Login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.Login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Login.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.Login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.Login.DisabledState.Parent = this.Login;
+            this.Login.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.Login.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
+            this.Login.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Login.ForeColor = System.Drawing.Color.White;
+            this.Login.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.Login.HoverState.Parent = this.Login;
+            this.Login.Location = new System.Drawing.Point(149, 148);
+            this.Login.Name = "Login";
+            this.Login.ShadowDecoration.Parent = this.Login;
+            this.Login.Size = new System.Drawing.Size(212, 48);
+            this.Login.TabIndex = 7;
+            this.Login.Text = "Login";
+            this.Login.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
+            // 
             // Password
             // 
             this.Password.BackColor = System.Drawing.Color.Transparent;
@@ -268,33 +304,6 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Password.TabIndex = 10;
             this.Password.UseSystemPasswordChar = true;
             // 
-            // Login
-            // 
-            this.Login.AutoRoundedCorners = true;
-            this.Login.BackColor = System.Drawing.Color.Transparent;
-            this.Login.BorderRadius = 23;
-            this.Login.CheckedState.Parent = this.Login;
-            this.Login.CustomImages.Parent = this.Login;
-            this.Login.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.Login.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.Login.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Login.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.Login.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.Login.DisabledState.Parent = this.Login;
-            this.Login.FillColor = System.Drawing.Color.MediumSlateBlue;
-            this.Login.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
-            this.Login.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Login.ForeColor = System.Drawing.Color.White;
-            this.Login.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
-            this.Login.HoverState.Parent = this.Login;
-            this.Login.Location = new System.Drawing.Point(149, 148);
-            this.Login.Name = "Login";
-            this.Login.ShadowDecoration.Parent = this.Login;
-            this.Login.Size = new System.Drawing.Size(212, 48);
-            this.Login.TabIndex = 7;
-            this.Login.Text = "Login";
-            this.Login.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Login_MouseDown);
-            // 
             // Clock1Timer
             // 
             this.Clock1Timer.Enabled = true;
@@ -315,20 +324,50 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.TextBoxElipse.BorderRadius = 40;
             this.TextBoxElipse.TargetControl = this.Password;
             // 
-            // OpenedEye
+            // GitHub
             // 
-            this.OpenedEye.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.OpenedEye.Image = global::CSGO_Cheat_Cleaner_Detector.Properties.Resources.Opened_Eye;
-            this.OpenedEye.ImageRotate = 0F;
-            this.OpenedEye.Location = new System.Drawing.Point(407, 109);
-            this.OpenedEye.Name = "OpenedEye";
-            this.OpenedEye.ShadowDecoration.Parent = this.OpenedEye;
-            this.OpenedEye.Size = new System.Drawing.Size(28, 15);
-            this.OpenedEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.OpenedEye.TabIndex = 25;
-            this.OpenedEye.TabStop = false;
-            this.OpenedEye.Visible = false;
-            this.OpenedEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OpenedEye_MouseDown);
+            this.GitHub.BackColor = System.Drawing.Color.Transparent;
+            this.GitHub.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GitHub.Image = global::CSGO_Cheat_Cleaner_Detector.Properties.Resources.github;
+            this.GitHub.ImageRotate = 0F;
+            this.GitHub.Location = new System.Drawing.Point(81, 192);
+            this.GitHub.Name = "GitHub";
+            this.GitHub.ShadowDecoration.Parent = this.GitHub;
+            this.GitHub.Size = new System.Drawing.Size(30, 30);
+            this.GitHub.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GitHub.TabIndex = 28;
+            this.GitHub.TabStop = false;
+            this.GitHub.Click += new System.EventHandler(this.GitHub_Click);
+            // 
+            // Website
+            // 
+            this.Website.BackColor = System.Drawing.Color.Transparent;
+            this.Website.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Website.Image = global::CSGO_Cheat_Cleaner_Detector.Properties.Resources.website;
+            this.Website.ImageRotate = 0F;
+            this.Website.Location = new System.Drawing.Point(7, 192);
+            this.Website.Name = "Website";
+            this.Website.ShadowDecoration.Parent = this.Website;
+            this.Website.Size = new System.Drawing.Size(30, 30);
+            this.Website.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Website.TabIndex = 27;
+            this.Website.TabStop = false;
+            this.Website.Click += new System.EventHandler(this.Website_Click);
+            // 
+            // Discord
+            // 
+            this.Discord.BackColor = System.Drawing.Color.Transparent;
+            this.Discord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Discord.Image = global::CSGO_Cheat_Cleaner_Detector.Properties.Resources.discord;
+            this.Discord.ImageRotate = 0F;
+            this.Discord.Location = new System.Drawing.Point(42, 192);
+            this.Discord.Name = "Discord";
+            this.Discord.ShadowDecoration.Parent = this.Discord;
+            this.Discord.Size = new System.Drawing.Size(30, 30);
+            this.Discord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Discord.TabIndex = 26;
+            this.Discord.TabStop = false;
+            this.Discord.Click += new System.EventHandler(this.Discord_Click);
             // 
             // ClosedEye
             // 
@@ -343,6 +382,21 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.ClosedEye.TabIndex = 24;
             this.ClosedEye.TabStop = false;
             this.ClosedEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ClosedEye_MouseDown);
+            // 
+            // OpenedEye
+            // 
+            this.OpenedEye.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.OpenedEye.Image = global::CSGO_Cheat_Cleaner_Detector.Properties.Resources.Opened_Eye;
+            this.OpenedEye.ImageRotate = 0F;
+            this.OpenedEye.Location = new System.Drawing.Point(407, 109);
+            this.OpenedEye.Name = "OpenedEye";
+            this.OpenedEye.ShadowDecoration.Parent = this.OpenedEye;
+            this.OpenedEye.Size = new System.Drawing.Size(28, 15);
+            this.OpenedEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.OpenedEye.TabIndex = 25;
+            this.OpenedEye.TabStop = false;
+            this.OpenedEye.Visible = false;
+            this.OpenedEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OpenedEye_MouseDown);
             // 
             // Login_Form
             // 
@@ -362,8 +416,11 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Drag_Panel.PerformLayout();
             this.Background_Panel.ResumeLayout(false);
             this.Background_Panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.OpenedEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GitHub)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Website)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Discord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ClosedEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.OpenedEye)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,5 +448,8 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Label RainbowText2;
         private Guna.UI2.WinForms.Guna2PictureBox OpenedEye;
         private Guna.UI2.WinForms.Guna2PictureBox ClosedEye;
+        private Guna.UI2.WinForms.Guna2PictureBox Discord;
+        private Guna.UI2.WinForms.Guna2PictureBox Website;
+        private Guna.UI2.WinForms.Guna2PictureBox GitHub;
     }
 }

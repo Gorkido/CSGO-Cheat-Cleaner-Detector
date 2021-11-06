@@ -215,6 +215,21 @@ namespace CSGO_Cheat_Cleaner_Detector
             ClosedEye.Hide();
         }
 
+        private void Website_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://NotYetHAX.gq");
+        }
+
+        private void Discord_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://discord.gg/mTmBR4yrC8");
+        }
+
+        private void GitHub_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/Gorkido");
+        }
+
         private void fadeIn(object sender, EventArgs e)
         {
             if (Opacity >= 0.9)

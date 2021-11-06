@@ -358,6 +358,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\CSGO.ico" />
+    <None Include="Resources\github.png" />
+    <None Include="Resources\website.png" />
+    <None Include="Resources\discord.png" />
     <None Include="Resources\Opened Eye.png" />
     <None Include="Resources\Closed.png" />
     <None Include="Resources\GIF.gif" />
