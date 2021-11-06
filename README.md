@@ -3,12 +3,12 @@
 <img src="https://user-images.githubusercontent.com/81165187/140623959-909e4930-2109-463f-907d-a240ea80a003.png" width="200" />
 
 # CSGO Cheat Cleaner / Detector
-# An application which cleans / detects CSGO Cheats. #
+**An application which cleans / detects CSGO Cheats.**
 </div>
 
 <p align="center">
-<img width="170" height="41" src="https://user-images.githubusercontent.com/81165187/140624552-0e481d08-89cc-415f-a0b0-2ef4b4915971.png"/>
-<img width="170" height="41" src="https://user-images.githubusercontent.com/81165187/140624553-ee209309-caf4-4051-a46d-2260ac252656.png" alt="License"/>
+<img width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140624552-0e481d08-89cc-415f-a0b0-2ef4b4915971.png"/>
+<img width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140624553-ee209309-caf4-4051-a46d-2260ac252656.png" alt="License"/>
 </p>
 
 ## Preview
