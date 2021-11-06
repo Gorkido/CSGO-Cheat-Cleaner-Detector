@@ -45,11 +45,11 @@ Aimfall
 
 GODWARE
 
-PPHUD V3
+PPHUD
 
 Aurora-Project
 
-One Tap V3
+One Tap
 
 YeahNot_CS
 
