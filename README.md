@@ -1,5 +1,22 @@
-# Information #
-This application cleans/detects CS:GO cheats. If you want to clean CS:GO cheats, then choose "CS:GO Cheat Cleaner". And if you want to detect CS:GO cheats on your system, click "CS:GO Cheat Detector".
+<div align="center">
+
+<img src="![CSGO](https://user-images.githubusercontent.com/81165187/140623959-909e4930-2109-463f-907d-a240ea80a003.png)" width="200" />
+
+# CSGO Cheat Cleaner / Detector
+An application which cleans / detects CSGO Cheats.
+</div>
+
+<p align="center">
+<img src="https://img.shields.io/badge/github-ozkanonur-212121.svg?style=for-the-badge&colorB=b71c1c"/>
+<img src="https://img.shields.io/github/license/ozkanonur/vs-deepdark-material?colorB=black&style=for-the-badge" alt="License"/>
+</p>
+
+## Preview
+
+<p align="center">
+<img width="1920" alt="1" src="https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png">
+<img width="1920" alt="2" src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
+</p>
 
 # How to build? #
 1-) First clone the repository.
