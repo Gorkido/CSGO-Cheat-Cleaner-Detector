@@ -7,8 +7,8 @@
 </div>
 
 <p align="center">
-<img link="https://github.com/NotYetHAX" width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140624552-0e481d08-89cc-415f-a0b0-2ef4b4915971.png"/>
-<img width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140624553-ee209309-caf4-4051-a46d-2260ac252656.png" alt="License"/>
+<img width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140625388-b74130f8-ccbf-42f1-aae8-f340a7aec5de.png"/>
+<img width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
 </p>
 
 ## Preview
