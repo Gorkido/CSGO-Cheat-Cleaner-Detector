@@ -50,8 +50,12 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormSettings = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.TextBoxElipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.OpenedEye = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.ClosedEye = new Guna.UI2.WinForms.Guna2PictureBox();
             this.Drag_Panel.SuspendLayout();
             this.Background_Panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OpenedEye)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClosedEye)).BeginInit();
             this.SuspendLayout();
             // 
             // FormDrag5
@@ -168,10 +172,12 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Background_Panel.Controls.Add(this.RainbowText);
             this.Background_Panel.Controls.Add(this.RainbowText2);
             this.Background_Panel.Controls.Add(this.RainbowDisableEnable);
-            this.Background_Panel.Controls.Add(this.Password);
             this.Background_Panel.Controls.Add(this.Clock1);
             this.Background_Panel.Controls.Add(this.Login);
             this.Background_Panel.Controls.Add(this.Drag_Panel);
+            this.Background_Panel.Controls.Add(this.ClosedEye);
+            this.Background_Panel.Controls.Add(this.OpenedEye);
+            this.Background_Panel.Controls.Add(this.Password);
             this.Background_Panel.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.Background_Panel.FillColor2 = System.Drawing.SystemColors.ActiveCaption;
             this.Background_Panel.Location = new System.Drawing.Point(-1, 0);
@@ -309,6 +315,35 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.TextBoxElipse.BorderRadius = 40;
             this.TextBoxElipse.TargetControl = this.Password;
             // 
+            // OpenedEye
+            // 
+            this.OpenedEye.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.OpenedEye.Image = global::CSGO_Cheat_Cleaner_Detector.Properties.Resources.Opened_Eye;
+            this.OpenedEye.ImageRotate = 0F;
+            this.OpenedEye.Location = new System.Drawing.Point(407, 109);
+            this.OpenedEye.Name = "OpenedEye";
+            this.OpenedEye.ShadowDecoration.Parent = this.OpenedEye;
+            this.OpenedEye.Size = new System.Drawing.Size(28, 15);
+            this.OpenedEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.OpenedEye.TabIndex = 25;
+            this.OpenedEye.TabStop = false;
+            this.OpenedEye.Visible = false;
+            this.OpenedEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.OpenedEye_MouseDown);
+            // 
+            // ClosedEye
+            // 
+            this.ClosedEye.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClosedEye.Image = global::CSGO_Cheat_Cleaner_Detector.Properties.Resources.Closed;
+            this.ClosedEye.ImageRotate = 0F;
+            this.ClosedEye.Location = new System.Drawing.Point(407, 103);
+            this.ClosedEye.Name = "ClosedEye";
+            this.ClosedEye.ShadowDecoration.Parent = this.ClosedEye;
+            this.ClosedEye.Size = new System.Drawing.Size(30, 30);
+            this.ClosedEye.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ClosedEye.TabIndex = 24;
+            this.ClosedEye.TabStop = false;
+            this.ClosedEye.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ClosedEye_MouseDown);
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -327,6 +362,8 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Drag_Panel.PerformLayout();
             this.Background_Panel.ResumeLayout(false);
             this.Background_Panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.OpenedEye)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClosedEye)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -352,5 +389,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private Guna.UI2.WinForms.Guna2ToggleSwitch RainbowDisableEnable;
         private System.Windows.Forms.Label RainbowText;
         private System.Windows.Forms.Label RainbowText2;
+        private Guna.UI2.WinForms.Guna2PictureBox OpenedEye;
+        private Guna.UI2.WinForms.Guna2PictureBox ClosedEye;
     }
 }

@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Drawing;
-using System.IO;
-using System.Net;
-using System.Text;
 using System.Windows.Forms;
 
 namespace CSGO_Cheat_Cleaner_Detector
@@ -152,7 +149,7 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void Login_MouseDown(object sender, MouseEventArgs e)
         {
-            string URL = "http://hastebin.com/raw/ixevakayam";
+            /*string URL = ""; // No more password
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URL);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             if (response.StatusCode == HttpStatusCode.OK)
@@ -169,39 +166,53 @@ namespace CSGO_Cheat_Cleaner_Detector
                     readStream = new StreamReader(receiveStream, Encoding.GetEncoding(response.CharacterSet));
                 }
 
-                string data = readStream.ReadToEnd();
-
-                if (Password.Text == "")
+                string data = readStream.ReadToEnd();*/ // No more password
+            string Pass = "Gorkido";
+            if (Password.Text == "")
+            {
+                Password.UseSystemPasswordChar = false;
+                Password.Text = "                    This field cannot be empty";
+                wait(2000);
+                Password.UseSystemPasswordChar = true;
+                Password.Text = "";
+            }
+            else
+            {
+                if (Password.Text == Pass)
                 {
-                    Password.UseSystemPasswordChar = false;
-                    Password.Text = "                    This field cannot be empty";
-                    wait(2000);
-                    Password.UseSystemPasswordChar = true;
-                    Password.Text = "";
+                    FadeOut.Tick += new EventHandler(fadeOut2);  //this calls the fade out function
+                    FadeOut.Interval = 2;
+                    FadeOut.Start();
                 }
                 else
                 {
-                    if (Password.Text == data)
-                    {
-                        FadeOut.Tick += new EventHandler(fadeOut2);  //this calls the fade out function
-                        FadeOut.Interval = 2;
-                        FadeOut.Start();
-                    }
-                    else
-                    {
-                        Error_Form OpenForm = new Error_Form();
-                        OpenForm.Show();
-                        Hide();
-                    }
+                    Error_Form OpenForm = new Error_Form();
+                    OpenForm.Show();
+                    Hide();
                 }
-                response.Close();
-                readStream.Close();
             }
+            /*response.Close();
+            readStream.Close();
+            }*/
         }
 
         private void Minimize_MouseDown(object sender, MouseEventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void OpenedEye_MouseDown(object sender, MouseEventArgs e)
+        {
+            OpenedEye.Hide();
+            Password.UseSystemPasswordChar = true;
+            ClosedEye.Show();
+        }
+
+        private void ClosedEye_MouseDown(object sender, MouseEventArgs e)
+        {
+            OpenedEye.Show();
+            Password.UseSystemPasswordChar = false;
+            ClosedEye.Hide();
         }
 
         private void fadeIn(object sender, EventArgs e)

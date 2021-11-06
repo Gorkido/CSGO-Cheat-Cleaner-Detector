@@ -105,11 +105,11 @@ namespace CSGO_Cheat_Cleaner_Detector
                 FadeOut.Stop();    //if it is, we stop the time
                 Hide();
                 string sPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-                string dir2 = @"\Cleaner.bat";
+                string dir2 = "\\Cleaner.bat";
                 ExecuteCommand(sPath + dir2);
                 if (File.Exists(sPath + dir2))
                 {
-                    File.Delete(sPath + dir2);// Deleting Desktop\Cleaner
+                    File.Delete(sPath + dir2);// Deleting Desktop\\Cleaner
                     Application.Exit();
                 }
                 else

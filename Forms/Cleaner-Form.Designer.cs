@@ -52,7 +52,7 @@ namespace CSGO_Cheat_Cleaner_Detector
             this.Clock1Timer = new System.Windows.Forms.Timer(this.components);
             this.FormDrag5 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.CheatLog2Drag = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.CleanLog2 = new System.Windows.Forms.ListBox();
+            this.ErrorLog = new System.Windows.Forms.ListBox();
             this.CheatLog2Elipse = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.Background_Panel.SuspendLayout();
             this.Drag_Panel.SuspendLayout();
@@ -307,35 +307,35 @@ namespace CSGO_Cheat_Cleaner_Detector
             // 
             this.CheatLog2Drag.DragEndTransparencyValue = 0.9D;
             this.CheatLog2Drag.DragStartTransparencyValue = 0.5D;
-            this.CheatLog2Drag.TargetControl = this.CleanLog2;
+            this.CheatLog2Drag.TargetControl = this.ErrorLog;
             this.CheatLog2Drag.TransparentWhileDrag = true;
             this.CheatLog2Drag.UseTransparentDrag = true;
             // 
-            // CleanLog2
+            // ErrorLog
             // 
-            this.CleanLog2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.CleanLog2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CleanLog2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CleanLog2.ForeColor = System.Drawing.Color.White;
-            this.CleanLog2.FormattingEnabled = true;
-            this.CleanLog2.HorizontalScrollbar = true;
-            this.CleanLog2.ItemHeight = 19;
-            this.CleanLog2.Location = new System.Drawing.Point(407, 113);
-            this.CleanLog2.Name = "CleanLog2";
-            this.CleanLog2.Size = new System.Drawing.Size(340, 285);
-            this.CleanLog2.TabIndex = 8;
+            this.ErrorLog.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ErrorLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ErrorLog.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ErrorLog.ForeColor = System.Drawing.Color.White;
+            this.ErrorLog.FormattingEnabled = true;
+            this.ErrorLog.HorizontalScrollbar = true;
+            this.ErrorLog.ItemHeight = 19;
+            this.ErrorLog.Location = new System.Drawing.Point(407, 113);
+            this.ErrorLog.Name = "ErrorLog";
+            this.ErrorLog.Size = new System.Drawing.Size(340, 285);
+            this.ErrorLog.TabIndex = 8;
             // 
             // CheatLog2Elipse
             // 
             this.CheatLog2Elipse.BorderRadius = 40;
-            this.CheatLog2Elipse.TargetControl = this.CleanLog2;
+            this.CheatLog2Elipse.TargetControl = this.ErrorLog;
             // 
             // Cleaner_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(807, 450);
-            this.Controls.Add(this.CleanLog2);
+            this.Controls.Add(this.ErrorLog);
             this.Controls.Add(this.Background_Panel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -371,7 +371,7 @@ namespace CSGO_Cheat_Cleaner_Detector
         private System.Windows.Forms.Label Clock1;
         private System.Windows.Forms.Timer Clock1Timer;
         private Guna.UI2.WinForms.Guna2DragControl FormDrag5;
-        private System.Windows.Forms.ListBox CleanLog2;
+        private System.Windows.Forms.ListBox ErrorLog;
         private Guna.UI2.WinForms.Guna2DragControl CheatLog2Drag;
         private Guna.UI2.WinForms.Guna2Elipse CheatLog2Elipse;
         private System.Windows.Forms.Label RainbowText;

@@ -89,10 +89,10 @@ namespace CSGO_Cheat_Cleaner_Detector
             FadeOut.Interval = 2;
             FadeOut.Start();
             string sPath = Path.GetTempPath(); //getting temp's path
-            string dir2 = @"\Gorkido_App_Downloader\Gorkido_Downloads";
+            string dir2 = "\\Gorkido_App_Downloader\\Gorkido_Downloads";
             if (Directory.Exists(sPath + dir2))
             {
-                Directory.Delete(sPath + dir2, true);// Deleting %temp%\Gorkido_Stuff\Gorkido_Downloads
+                Directory.Delete(sPath + dir2, true);// Deleting %temp%\\Gorkido_Stuff\\Gorkido_Downloads
             }
         }
 
@@ -166,24 +166,24 @@ namespace CSGO_Cheat_Cleaner_Detector
         {
             if (Environment.Is64BitOperatingSystem)
             {
-                string dir = @"\Gorkido_App_Downloader\Gorkido_Downloads";
-                string dir2 = @"\Gorkido_App_Downloader\Gorkido_Downloads\Everything-1.4.1.1009.x64-Setup.exe";
+                string dir = "\\Gorkido_App_Downloader\\Gorkido_Downloads";
+                string dir2 = "\\Gorkido_App_Downloader\\Gorkido_Downloads\\Everything-1.4.1.1009.x64-Setup.exe";
                 string sPath = Path.GetTempPath(); //getting temp's path
                 if (!Directory.Exists(sPath + dir))
                 {
-                    Directory.CreateDirectory(sPath + dir); //if \Gorkido_Downloads doesn't exist it'll create the folder
+                    Directory.CreateDirectory(sPath + dir); //if \\Gorkido_Downloads doesn't exist it'll create the folder
                 }
                 if (File.Exists(sPath + dir2))
                 {
                     if (MessageBox.Show("'Everything-1.4.1.1009.x64-Setup.exe' already exists. Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x64-Setup.exe".
+                        Process.Start((sPath + dir + "\\Everything-1.4.1.1009.x64-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x64-Setup.exe".
                     }
                 }
                 else
                 {
                     {
-                        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/895329334624124959/895329540849668136/Everything-1.4.1.1009.x64-Setup.exe"), (sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));
+                        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/895329334624124959/895329540849668136/Everything-1.4.1.1009.x64-Setup.exe"), (sPath + dir + "\\Everything-1.4.1.1009.x64-Setup.exe"));
                         wait(600);
                         ProgressBar.Show();
                         webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompleted64);
@@ -193,24 +193,24 @@ namespace CSGO_Cheat_Cleaner_Detector
             }
             else
             {
-                string dir = @"\Gorkido_App_Downloader\Gorkido_Downloads";
-                string dir2 = @"\Gorkido_App_Downloader\Gorkido_Downloads\Everything-1.4.1.1009.x86-Setup.exe";
+                string dir = "\\Gorkido_App_Downloader\\Gorkido_Downloads";
+                string dir2 = "\\Gorkido_App_Downloader\\Gorkido_Downloads\\Everything-1.4.1.1009.x86-Setup.exe";
                 string sPath = Path.GetTempPath(); //getting temp's path
                 if (!Directory.Exists(sPath + dir))
                 {
-                    Directory.CreateDirectory(sPath + dir); //if \Gorkido_Downloads doesn't exist it'll create the folder
+                    Directory.CreateDirectory(sPath + dir); //if \\Gorkido_Downloads doesn't exist it'll create the folder
                 }
                 if (File.Exists(sPath + dir2))
                 {
                     if (MessageBox.Show("'Everything-1.4.1.1009.x86-Setup.exe' already exists. Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
                     {
-                        Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x86-Setup.exe".
+                        Process.Start((sPath + dir + "\\Everything-1.4.1.1009.x86-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x86-Setup.exe".
                     }
                 }
                 else
                 {
                     {
-                        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/895329334624124959/895329562974642176/Everything-1.4.1.1009.x86-Setup.exe"), (sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));
+                        webClient.DownloadFileAsync(new Uri("https://cdn.discordapp.com/attachments/895329334624124959/895329562974642176/Everything-1.4.1.1009.x86-Setup.exe"), (sPath + dir + "\\Everything-1.4.1.1009.x86-Setup.exe"));
                         wait(600);
                         ProgressBar.Show();
                         webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(DownloadCompleted86);
@@ -232,11 +232,11 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void DownloadCompleted64(object sender, AsyncCompletedEventArgs e)
         {
-            string dir = @"\Gorkido_App_Downloader\Gorkido_Downloads";
+            string dir = "\\Gorkido_App_Downloader\\Gorkido_Downloads";
             string sPath = Path.GetTempPath(); //getting temp's path
             if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x64-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x64-Setup.exe".
+                Process.Start((sPath + dir + "\\Everything-1.4.1.1009.x64-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x64-Setup.exe".
                 ProgressBar.Hide();
             }
             else
@@ -252,11 +252,11 @@ namespace CSGO_Cheat_Cleaner_Detector
 
         private void DownloadCompleted86(object sender, AsyncCompletedEventArgs e)
         {
-            string dir = @"\Gorkido_App_Downloader\Gorkido_Downloads";
+            string dir = "\\Gorkido_App_Downloader\\Gorkido_Downloads";
             string sPath = Path.GetTempPath(); //getting temp's path
             if (MessageBox.Show("Do you want to install Everything Application?", "Confirmation", MessageBoxButtons.YesNo) == System.Windows.Forms.DialogResult.Yes)
             {
-                Process.Start((sPath + dir + @"\Everything-1.4.1.1009.x86-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x86-Setup.exe".
+                Process.Start((sPath + dir + "\\Everything-1.4.1.1009.x86-Setup.exe"));// If user clicks "yes" then it will open "Everything-1.4.1.1009.x86-Setup.exe".
             }
             else
             {
