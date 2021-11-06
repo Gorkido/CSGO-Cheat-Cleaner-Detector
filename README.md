@@ -7,8 +7,8 @@ An application which cleans / detects CSGO Cheats.
 </div>
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/81165187/140624469-6e258e16-51ae-4b6d-a06a-846b9e1dd5e5.png"/>
-<img src="https://user-images.githubusercontent.com/81165187/140624470-cc35366a-f825-4c4b-8f4b-93f6a98ef7a8.png" alt="License"/>
+<img src="https://user-images.githubusercontent.com/81165187/140624552-0e481d08-89cc-415f-a0b0-2ef4b4915971.png"/>
+<img src="https://user-images.githubusercontent.com/81165187/140624553-ee209309-caf4-4051-a46d-2260ac252656.png" alt="License"/>
 </p>
 
 ## Preview
