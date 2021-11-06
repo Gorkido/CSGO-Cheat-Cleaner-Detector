@@ -18,7 +18,7 @@ An application which cleans / detects CSGO Cheats.
 <img width="1920" alt="2" src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
 </p>
 
-# How to build? #
+## How to build?
 1-) First clone the repository.
 
 2-) Open NuGet Package Manager.
@@ -35,7 +35,7 @@ An application which cleans / detects CSGO Cheats.
 
 8-) Have Fun.
 
-# Cheats #
+## Cheats
 
 Osiris
 
