@@ -19,7 +19,7 @@
 </p>
 
 ## How to build?
-1-) First clone the repository.
+1-) Clone the repository.
 
 2-) Open NuGet Package Manager.
 
