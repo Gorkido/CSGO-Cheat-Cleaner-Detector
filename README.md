@@ -7,7 +7,7 @@
 </div>
 
 <p align="center">
-<img width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140624552-0e481d08-89cc-415f-a0b0-2ef4b4915971.png"/>
+<img link="https://github.com/NotYetHAX" width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140624552-0e481d08-89cc-415f-a0b0-2ef4b4915971.png"/>
 <img width="170" height="42" src="https://user-images.githubusercontent.com/81165187/140624553-ee209309-caf4-4051-a46d-2260ac252656.png" alt="License"/>
 </p>
 
