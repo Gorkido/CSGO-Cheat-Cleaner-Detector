@@ -7,8 +7,8 @@
 </div>
 
 <p align="center">
-<img width="170" height="22" src="https://user-images.githubusercontent.com/81165187/140625388-b74130f8-ccbf-42f1-aae8-f340a7aec5de.png"/>
-<img width="150" height="22" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
+<img width="150" height="30" src="https://user-images.githubusercontent.com/81165187/140625388-b74130f8-ccbf-42f1-aae8-f340a7aec5de.png"/>
+<img width="150" height="30" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
 </p>
 
 ## Preview
