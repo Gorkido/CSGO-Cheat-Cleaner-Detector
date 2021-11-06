@@ -1,14 +1,14 @@
 <div align="center">
 
-<img src="![CSGO](https://user-images.githubusercontent.com/81165187/140623959-909e4930-2109-463f-907d-a240ea80a003.png)" width="200" />
+<img src="https://user-images.githubusercontent.com/81165187/140623959-909e4930-2109-463f-907d-a240ea80a003.png" width="200" />
 
 # CSGO Cheat Cleaner / Detector
 An application which cleans / detects CSGO Cheats.
 </div>
 
 <p align="center">
-<img src="https://img.shields.io/badge/github-ozkanonur-212121.svg?style=for-the-badge&colorB=b71c1c"/>
-<img src="https://img.shields.io/github/license/ozkanonur/vs-deepdark-material?colorB=black&style=for-the-badge" alt="License"/>
+<img src="https://user-images.githubusercontent.com/81165187/140624469-6e258e16-51ae-4b6d-a06a-846b9e1dd5e5.png"/>
+<img src="https://user-images.githubusercontent.com/81165187/140624470-cc35366a-f825-4c4b-8f4b-93f6a98ef7a8.png" alt="License"/>
 </p>
 
 ## Preview
@@ -34,11 +34,6 @@ An application which cleans / detects CSGO Cheats.
 7-) And you are ready to go!
 
 8-) Have Fun.
-
-# Preview #
-![image](https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png)
-
-![image](https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png)
 
 # Cheats #
 
