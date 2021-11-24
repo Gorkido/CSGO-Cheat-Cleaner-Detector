@@ -37,7 +37,7 @@
 
 ## Cheats
 
-> Osiris
+> > Osiris
 
 > Nixware
 
