@@ -4,24 +4,18 @@
 
 # CSGO Cheat Cleaner / Detector
 **An application which cleans / detects CSGO cheats**
-</div>
 
 <p align="center">
 <img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625388-b74130f8-ccbf-42f1-aae8-f340a7aec5de.png"/>
 <img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
 </p>
-
-<div align="center">
   
 ## Preview
-</div>
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png">
 <img src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
 </p>
-
-<div align="center">
   
 ## How to build?
 
@@ -40,9 +34,6 @@
 7-) And you are ready to go!
 
 8-) Have Fun.
-</div>
-
-<div align="center">
   
 ## Cheats
   
@@ -91,9 +82,6 @@ sByteCSGONew
 
 R41N3W4R3
 ```
-</div>
-
-<div align="center">
   
 ## Donation
   
