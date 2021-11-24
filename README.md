@@ -55,11 +55,11 @@
 
 - PPHUD
 
-- Aurora-Project
+-Aurora-Project
 
-- One Tap
+-One Tap
 
-- YeahNot_CS
+-YeahNot_CS
 
 - BlazeHack
 
