@@ -11,14 +11,14 @@
 <img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
 </p>
 
-## Preview
+# Preview
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png">
 <img src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
 </p>
 
-## How to build?
+# How to build?
 1-) Clone the repository.
 
 2-) Open NuGet Package Manager.
@@ -35,7 +35,7 @@
 
 8-) Have Fun.
 
-## Cheats
+# Cheats
 
 - Osiris
 
@@ -81,7 +81,7 @@
 
 - R41N3W4R3
 
-## Donation
+# Donation
 
 <div align="center">
   
