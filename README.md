@@ -11,22 +11,19 @@
 <img width="150" height="35" src="https://user-images.githubusercontent.com/81165187/140625389-693c4d7f-c655-4cfa-a59c-4c781f17eaba.png" alt="License"/>
 </p>
 
+<div align="center">
+| BTC                                                                                                        | 
+| ------------------------------------------------------------------------------------------------------------
+| ![bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw](https://user-images.githubusercontent.com/81165187/143252528-5b5624eb-2908-465f-a14d-66d896aa3d39.png "bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw")|
+| `bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw`|
+</div>
+
 ## Preview
 
 <p align="center">
 <img src="https://user-images.githubusercontent.com/81165187/131223258-a81bb2a5-ff6d-4289-a4e8-bc893261f0bc.png">
 <img src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
 </p>
-
-## Donation
-<div align="center">
-
-| BTC                                                                                                        | 
-| ------------------------------------------------------------------------------------------------------------
-| ![bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw](https://user-images.githubusercontent.com/81165187/143252528-5b5624eb-2908-465f-a14d-66d896aa3d39.png "bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw")|
-| `bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw`|
-
-</div>
 
 ## How to build?
 1-) Clone the repository.
