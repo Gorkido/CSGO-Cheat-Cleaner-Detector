@@ -18,6 +18,17 @@
 <img src="https://user-images.githubusercontent.com/81165187/131223268-d5f0a0de-8045-4da9-9868-79ef2e7b0fb5.png">
 </p>
 
+<div align="center">
+
+[![Build status](https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_200x51.png)](https://paypal.me/ChrisTaylorCodes)
+
+| BTC                                                                                                        | 
+| ------------------------------------------------------------------------------------------------------------
+| ![bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw](https://user-images.githubusercontent.com/81165187/143252528-5b5624eb-2908-465f-a14d-66d896aa3d39.png "bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw")|
+| `bc1qtfr0fasggv47z56zwxlt0k5m9euwzp5g5k8pyw`                                                               |
+
+</div>
+
 ## How to build?
 1-) Clone the repository.
 
