@@ -46,8 +46,8 @@
   
 ## Cheats
 ```
-- Osiris
-
+> Osiris
+```
 - Nixware
 
 - Aimfall
