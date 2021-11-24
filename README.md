@@ -44,7 +44,6 @@
 <div align="center">
   
 ## Cheats
-</div>
 
 - Osiris
 
@@ -89,8 +88,12 @@
 - sByteCSGONew
 
 - R41N3W4R3
+</div>
 
-# Donation
+<div align="center">
+  
+## Donation
+</div>
 
 <div align="center">
   
