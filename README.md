@@ -24,7 +24,7 @@
 <div align="center">
   
 ## How to build?
-</div>
+
 1-) Clone the repository.
 
 2-) Open NuGet Package Manager.
@@ -40,6 +40,7 @@
 7-) And you are ready to go!
 
 8-) Have Fun.
+</div>
 
 <div align="center">
   
