@@ -39,7 +39,7 @@
 
 - Osiris
 
-Nixware
+- Nixware
 
 - Aimfall
 
