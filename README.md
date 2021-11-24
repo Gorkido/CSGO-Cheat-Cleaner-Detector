@@ -45,7 +45,7 @@
 <div align="center">
   
 ## Cheats
-
+```
 - Osiris
 
 - Nixware
@@ -89,6 +89,7 @@
 - sByteCSGONew
 
 - R41N3W4R3
+```
 </div>
 
 <div align="center">
